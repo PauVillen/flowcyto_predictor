@@ -20,10 +20,11 @@ gene_list = df['Symbol'].unique().tolist()
 cell_list = df['Cell.type'].unique()
 
 # Match genes to their Ensembl ID
-results = my_gene.querymany(gene_list, scopes='symbol', fields='ensembl.gene', species='human')
+results = my_gene.querymany(gene_list, scopes='symbol', fields='ensembl.gene,name', species='human')
 
-# Create dictionary to store the Symbol - Ensembl ID relation
+# Create dictionary to store the Symbol - Ensembl ID / full name relation
 symbol_to_ensembl = {}
+symbol_to_name = {}
 for item in results:
     if 'ensembl' in item:
         # If the result is a list, take the first one
@@ -31,12 +32,18 @@ for item in results:
             symbol_to_ensembl[item['query']] = item['ensembl'][0]['gene']
         elif isinstance(item['ensembl'], dict):
             symbol_to_ensembl[item['query']] = item['ensembl']['gene']
+    if 'name' in item:
+        symbol_to_name[item['query']] = item['name']
+        
 # Manually add the Ensembl ID for the two genes which get no hit
 symbol_to_ensembl['HIST1H3H'] = 'ENSG00000278828'
 symbol_to_ensembl['C2ORF88'] = 'ENSG00000187699'
+symbol_to_name['HIST1H3H'] = 'H3 clustered histone 10'
+symbol_to_name['C2ORF88'] = 'chromosome 2 open reading frame 88'
             
 # Map the dictionary to the data frame
 df['ensembl_id'] = df['Symbol'].map(symbol_to_ensembl)
+df['gene_full_name'] = df['Symbol'].map(symbol_to_name)
 
 # Assign IDs to cell types
 cell_id_map = {name: f"CELL_{i:04d}" for i, name in enumerate(cell_list)}
