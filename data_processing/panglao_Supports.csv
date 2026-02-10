@@ -1,0 +1,101 @@
+Symbol,Cell.type,Source,Supports
+ALAS2,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+AQP1,Erythroid-like and erythroid precursor cells,PanglaoDB,12
+CCNA2,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+PKLR,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HBB,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HBA1,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HBA2,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HBG1,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HBG2,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+CD36,Erythroid-like and erythroid precursor cells,PanglaoDB,10
+GYPA,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+ITGA4,Erythroid-like and erythroid precursor cells,PanglaoDB,7
+GYPB,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+AHSP,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HBM,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+FECH,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+EPOR,Erythroid-like and erythroid precursor cells,PanglaoDB,4
+BPGM,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+DCAF12,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HBD,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HEMGN,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+HMBS,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+NCOA4,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+RBM38,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+TMCC2,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+SLC4A1,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+SLC25A39,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+SLC25A37,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+FOSB,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+HTATSF1,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+EPB41,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+RSAD2,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+APOA1,Erythroid-like and erythroid precursor cells,PanglaoDB,5
+ALAD,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+S100A9,Erythroid-like and erythroid precursor cells,PanglaoDB,11
+S100A8,Erythroid-like and erythroid precursor cells,PanglaoDB,12
+ERMAP,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+KCNN4,Erythroid-like and erythroid precursor cells,PanglaoDB,4
+PAN3,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+VAMP5,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+PNPO,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+TSPO2,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+RHD,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+KLF1,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+EPB42,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+CD44,Erythroid-like and erythroid precursor cells,PanglaoDB,9
+CD47,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+CD55,Erythroid-like and erythroid precursor cells,PanglaoDB,7
+GYPC,Erythroid-like and erythroid precursor cells,PanglaoDB,2
+KEL,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+RHAG,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+SNCA,Erythroid-like and erythroid precursor cells,PanglaoDB,1
+CCL5,Platelets,PanglaoDB,6
+ITGA2B,Platelets,PanglaoDB,3
+ITGB3,Platelets,PanglaoDB,4
+PF4,Platelets,PanglaoDB,3
+F13A1,Platelets,PanglaoDB,3
+THBS1,Platelets,PanglaoDB,4
+BIN2,Platelets,PanglaoDB,3
+FERMT3,Platelets,PanglaoDB,1
+PTCRA,Platelets,PanglaoDB,2
+TUBB1,Platelets,PanglaoDB,1
+GP9,Platelets,PanglaoDB,2
+NCOA4,Platelets,PanglaoDB,2
+RGS18,Platelets,PanglaoDB,4
+PPBP,Platelets,PanglaoDB,2
+DAB2,Platelets,PanglaoDB,3
+CXCR4,Platelets,PanglaoDB,18
+CLEC1B,Platelets,PanglaoDB,3
+TREML1,Platelets,PanglaoDB,2
+PLEK,Platelets,PanglaoDB,3
+CD9,Platelets,PanglaoDB,6
+NRGN,Platelets,PanglaoDB,6
+OST4,Platelets,PanglaoDB,1
+SPARC,Platelets,PanglaoDB,5
+GPX1,Platelets,PanglaoDB,1
+CAVIN2,Platelets,PanglaoDB,1
+PPDPF,Platelets,PanglaoDB,1
+MYL9,Platelets,PanglaoDB,7
+MAP3K7CL,Platelets,PanglaoDB,2
+PTGS1,Platelets,PanglaoDB,3
+GNG11,Platelets,PanglaoDB,2
+GRAP2,Platelets,PanglaoDB,2
+CTSA,Platelets,PanglaoDB,2
+MPIG6B,Platelets,PanglaoDB,1
+HIST1H3H,Platelets,PanglaoDB,1
+WIPF1,Platelets,PanglaoDB,2
+C2ORF88,Platelets,PanglaoDB,1
+ARHGDIB,Platelets,PanglaoDB,1
+CDKN2D,Platelets,PanglaoDB,1
+HLA-A,Platelets,PanglaoDB,2
+PDLIM1,Platelets,PanglaoDB,1
+SMOX,Platelets,PanglaoDB,1
+SRGN,Platelets,PanglaoDB,2
+SH3BGRL2,Platelets,PanglaoDB,1
+RAP1B,Platelets,PanglaoDB,1
+FHL1,Platelets,PanglaoDB,2
+LAPTM5,Platelets,PanglaoDB,1
+RASGRP2,Platelets,PanglaoDB,3
+ILK,Platelets,PanglaoDB,2

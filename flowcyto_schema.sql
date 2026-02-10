@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `mydb`.`markers` ;
 CREATE TABLE IF NOT EXISTS `mydb`.`markers` (
   `gene_ensembl_id` VARCHAR(45) NOT NULL,
   `cell_type_id` VARCHAR(45) NOT NULL,
-  `weight` DECIMAL(3,2) NULL,
+  `weight` DECIMAL(5,2) NULL,
   `source` VARCHAR(100) NULL,
   PRIMARY KEY (`gene_ensembl_id`, `cell_type_id`),
   INDEX `fk_markers_users_idx` (`gene_ensembl_id` ASC) VISIBLE,

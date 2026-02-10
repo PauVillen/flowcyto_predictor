@@ -1,0 +1,326 @@
+Cell.type,Source,Supports,Symbol,ensembl_id,cell_id
+Hematopoietic stem cell,CellMarker2.0,1,ALAS2,ENSG00000158578,CELL_0000
+Melanocyte,CellMarker2.0,1,ALCAM,ENSG00000170017,CELL_0001
+Immune cells,CellMarker2.0,1,ARL14,ENSG00000179674,CELL_0002
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,AXL,ENSG00000167601,CELL_0003
+B cell,CellMarker2.0,1,PTPRC,ENSG00000262418,CELL_0004
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,CLEC4C,ENSG00000198178,CELL_0003
+Plasmacytoid dendritic cell(pDC),CellMarker2.0,1,CLEC4C,ENSG00000198178,CELL_0005
+Conventional dendritic cell 1(cDC1),CellMarker2.0,1,CADM1,ENSG00000182985,CELL_0006
+Eosinophil,CellMarker2.0,1,CCR3,ENSG00000183625,CELL_0007
+M1 macrophage,CellMarker2.0,1,CCR7,ENSG00000126353,CELL_0008
+Plasmacytoid dendritic cell(pDC),CellMarker2.0,1,CCR7,ENSG00000126353,CELL_0005
+T cell,CellMarker2.0,1,ITGAE,ENSG00000083457,CELL_0009
+Tissue resident memory T(TRM) cell,CellMarker2.0,1,ITGAE,ENSG00000083457,CELL_0010
+Mast cell,CellMarker2.0,1,KIT,ENSG00000157404,CELL_0011
+Progenitor cell,CellMarker2.0,1,KIT,ENSG00000157404,CELL_0012
+Conventional dendritic cell 2-A (cDC2-A),CellMarker2.0,1,ITGAM,ENSG00000169896,CELL_0013
+Conventional dendritic cell 2-B (cDC2-B),CellMarker2.0,1,ITGAM,ENSG00000169896,CELL_0014
+Eosinophil,CellMarker2.0,1,ITGAM,ENSG00000169896,CELL_0007
+Cancerous myeloid derived suppressor cell (MDSC),CellMarker2.0,1,ITGAM,ENSG00000169896,CELL_0015
+Cancerous myeloid derived suppressor cell (MDSC),CellMarker2.0,1,ITGAM,ENSG00000169896,CELL_0015
+Neutrophil,CellMarker2.0,1,ITGAM,ENSG00000169896,CELL_0016
+Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CellMarker2.0,1,ITGAX,ENSG00000140678,CELL_0017
+CD16+ dendritic cell (CD16+ DC),CellMarker2.0,1,ITGAX,ENSG00000140678,CELL_0018
+Conventional dendritic cell 2-A (cDC2-A),CellMarker2.0,1,ITGAX,ENSG00000140678,CELL_0013
+Conventional dendritic cell 2-B (cDC2-B),CellMarker2.0,1,ITGAX,ENSG00000140678,CELL_0014
+Neutrophil,CellMarker2.0,1,ITGAX,ENSG00000140678,CELL_0016
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,IL3RA,ENSG00000292332,CELL_0003
+Cancer stem cell,CellMarker2.0,2,IL3RA,ENSG00000292332,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,IL3RA,ENSG00000292332,CELL_0020
+Plasmacytoid dendritic cell(pDC),CellMarker2.0,1,IL3RA,ENSG00000292332,CELL_0005
+M1 macrophage,CellMarker2.0,1,IL7R,ENSG00000168685,CELL_0008
+Regulatory T(Treg) cell,CellMarker2.0,1,IL7R,ENSG00000168685,CELL_0021
+Platelet,CellMarker2.0,1,CXCR1,ENSG00000163464,CELL_0022
+Cancer stem cell,CellMarker2.0,1,PROM1,ENSG00000007062,CELL_0019
+Plasma cell,CellMarker2.0,1,SDC1,ENSG00000115884,CELL_0023
+Monocyte,CellMarker2.0,3,NDUFA2,ENSG00000131495,CELL_0024
+Cancerous myeloid derived suppressor cell (MDSC),CellMarker2.0,1,NDUFA2,ENSG00000131495,CELL_0015
+Cancerous myeloid derived suppressor cell (MDSC),CellMarker2.0,1,NDUFA2,ENSG00000131495,CELL_0015
+Conventional dendritic cell 1(cDC1),CellMarker2.0,1,THBD,ENSG00000178726,CELL_0006
+Platelet,CellMarker2.0,1,CD40LG,ENSG00000102245,CELL_0022
+Cancer stem cell,CellMarker2.0,1,BST1,ENSG00000109743,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,BST1,ENSG00000109743,CELL_0020
+CD16+ dendritic cell (CD16+ DC),CellMarker2.0,1,FCGR3A,ENSG00000203747,CELL_0018
+M1 macrophage,CellMarker2.0,1,FCGR3A,ENSG00000203747,CELL_0008
+Natural killer cell,CellMarker2.0,1,FCGR3A,ENSG00000203747,CELL_0025
+Neutrophil,CellMarker2.0,2,FCGR3A,ENSG00000203747,CELL_0016
+Conventional dendritic cell 2-B (cDC2-B),CellMarker2.0,1,CD163,ENSG00000177575,CELL_0014
+M2 macrophage,CellMarker2.0,1,CD163,ENSG00000177575,CELL_0026
+Macrophage,CellMarker2.0,3,CD163,ENSG00000177575,CELL_0027
+Monocyte,CellMarker2.0,1,CD163,ENSG00000177575,CELL_0024
+Hematopoietic stem cell,CellMarker2.0,1,CD164,ENSG00000135535,CELL_0000
+Monocyte,CellMarker2.0,1,SIGLEC1,ENSG00000088827,CELL_0024
+Neutrophil,CellMarker2.0,1,CD177,ENSG00000204936,CELL_0016
+M2 macrophage,CellMarker2.0,1,CXCR4,ENSG00000121966,CELL_0026
+B cell,CellMarker2.0,4,CD19,ENSG00000177455,CELL_0004
+T cell,CellMarker2.0,1,CCR7,ENSG00000126353,CELL_0009
+Conventional dendritic cell 2-A (cDC2-A),CellMarker2.0,1,CD1C,ENSG00000158481,CELL_0013
+Conventional dendritic cell 2-B (cDC2-B),CellMarker2.0,1,CD1C,ENSG00000158481,CELL_0014
+Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CellMarker2.0,1,CD2,ENSG00000116824,CELL_0017
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,CD2,ENSG00000116824,CELL_0003
+Innate lymphoid cell,CellMarker2.0,1,CD200R1,ENSG00000163606,CELL_0028
+Macrophage,CellMarker2.0,1,MSR1,ENSG00000038945,CELL_0027
+M2 macrophage,CellMarker2.0,1,MRC1,ENSG00000260314,CELL_0026
+Macrophage,CellMarker2.0,1,MRC1,ENSG00000260314,CELL_0027
+M2 macrophage,CellMarker2.0,1,CD209,ENSG00000090659,CELL_0026
+M2 macrophage,CellMarker2.0,1,FCER2,ENSG00000104921,CELL_0026
+Red blood cell (erythrocyte),CellMarker2.0,2,GYPA,ENSG00000170180,CELL_0029
+Cancer stem cell,CellMarker2.0,1,CD244,ENSG00000122223,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,CD244,ENSG00000122223,CELL_0020
+Cancer stem cell,CellMarker2.0,2,ISG20,ENSG00000172183,CELL_0019
+Regulatory T(Treg) cell,CellMarker2.0,1,ISG20,ENSG00000172183,CELL_0021
+Cancer stem cell,CellMarker2.0,1,DPP4,ENSG00000197635,CELL_0019
+Cancerous CD8+ T cell,CellMarker2.0,1,CD27,ENSG00000139193,CELL_0030
+Memory B cell,CellMarker2.0,1,CD27,ENSG00000139193,CELL_0031
+T cell,CellMarker2.0,1,CD27,ENSG00000139193,CELL_0009
+Cancerous CD8+ T cell,CellMarker2.0,1,CD28,ENSG00000178562,CELL_0030
+M1 macrophage,CellMarker2.0,1,FCGR2A,ENSG00000143226,CELL_0008
+Conventional dendritic cell 2-A (cDC2-A),CellMarker2.0,1,FCGR2B,ENSG00000072694,CELL_0013
+Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CellMarker2.0,1,CD33,ENSG00000105383,CELL_0017
+Cancer stem cell,CellMarker2.0,1,CD33,ENSG00000105383,CELL_0019
+Conventional dendritic cell 1(cDC1),CellMarker2.0,1,CD33,ENSG00000105383,CELL_0006
+Conventional dendritic cell 2-A (cDC2-A),CellMarker2.0,1,CD33,ENSG00000105383,CELL_0013
+Conventional dendritic cell 2-B (cDC2-B),CellMarker2.0,1,CD33,ENSG00000105383,CELL_0014
+Leukemic stem cell,CellMarker2.0,1,CD33,ENSG00000105383,CELL_0020
+Cancerous myeloid derived suppressor cell (MDSC),CellMarker2.0,1,CD33,ENSG00000105383,CELL_0015
+Natural killer cell,CellMarker2.0,1,NCR3,ENSG00000206430,CELL_0025
+Cancer stem cell,CellMarker2.0,2,CD34,ENSG00000174059,CELL_0019
+Cancerous myeloid derived suppressor cell (MDSC),CellMarker2.0,1,CD34,ENSG00000174059,CELL_0015
+Progenitor cell,CellMarker2.0,1,CD34,ENSG00000174059,CELL_0012
+Conventional dendritic cell 2-B (cDC2-B),CellMarker2.0,1,CD36,ENSG00000135218,CELL_0014
+M2 macrophage,CellMarker2.0,1,CD36,ENSG00000135218,CELL_0026
+Plasma cell,CellMarker2.0,1,CD38,ENSG00000004468,CELL_0023
+CD4+ T cell,CellMarker2.0,1,CD3D,ENSG00000167286,CELL_0032
+CD8 T cell,CellMarker2.0,1,CD3D,ENSG00000167286,CELL_0033
+T cell,CellMarker2.0,1,CD3E,ENSG00000198851,CELL_0009
+Megakaryocyte,CellMarker2.0,1,ITGA2B,ENSG00000005961,CELL_0034
+Platelet,CellMarker2.0,1,ITGA2B,ENSG00000005961,CELL_0022
+Cancer stem cell,CellMarker2.0,1,CD44,ENSG00000026508,CELL_0019
+Natural killer cell,CellMarker2.0,1,CD44,ENSG00000026508,CELL_0025
+Leukocyte,CellMarker2.0,1,PTPRC,ENSG00000262418,CELL_0035
+Lymphocyte,CellMarker2.0,1,PTPRC,ENSG00000262418,CELL_0036
+Neutrophil,CellMarker2.0,1,PTPRC,ENSG00000262418,CELL_0016
+Circulating tumour cell (CTC),CellMarker2.0,1,CD46,ENSG00000117335,CELL_0037
+Cancer stem cell,CellMarker2.0,1,CD47,ENSG00000196776,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,CD47,ENSG00000196776,CELL_0020
+Regulatory T(Treg) cell,CellMarker2.0,1,ITGA4,ENSG00000115232,CELL_0021
+Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CellMarker2.0,1,CD5,ENSG00000110448,CELL_0017
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,CD5,ENSG00000110448,CELL_0003
+B cell,CellMarker2.0,1,CD5,ENSG00000110448,CELL_0004
+Conventional dendritic cell 2-A (cDC2-A),CellMarker2.0,1,CD5,ENSG00000110448,CELL_0013
+Cancer stem cell,CellMarker2.0,1,NCAM1,ENSG00000149294,CELL_0019
+Natural killer cell,CellMarker2.0,3,NCAM1,ENSG00000149294,CELL_0025
+Natural killer cell,CellMarker2.0,2,NCAM1,ENSG00000149294,CELL_0025
+Effector T(Teff) cell,CellMarker2.0,1,B3GAT1,ENSG00000109956,CELL_0038
+Natural killer cell,CellMarker2.0,2,B3GAT1,ENSG00000109956,CELL_0025
+Megakaryocyte,CellMarker2.0,1,ITGB3,ENSG00000259207,CELL_0034
+M1 macrophage,CellMarker2.0,1,SELP,ENSG00000174175,CELL_0008
+Neutrophil,CellMarker2.0,1,SELL,ENSG00000188404,CELL_0016
+M1 macrophage,CellMarker2.0,1,FCGR1A,ENSG00000150337,CELL_0008
+Neutrophil,CellMarker2.0,1,CEACAM8,ENSG00000124469,CELL_0016
+Natural killer cell,CellMarker2.0,1,CD69,ENSG00000110848,CELL_0025
+T cell,CellMarker2.0,1,CD69,ENSG00000110848,CELL_0009
+Tissue resident memory T(TRM) cell,CellMarker2.0,1,CD69,ENSG00000110848,CELL_0010
+Cancer stem cell,CellMarker2.0,1,CD7,ENSG00000173762,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,CD7,ENSG00000173762,CELL_0020
+B cell,CellMarker2.0,2,CD79A,ENSG00000105369,CELL_0004
+Plasma cell,CellMarker2.0,1,CD79A,ENSG00000105369,CELL_0023
+T cell,CellMarker2.0,1,CD8A,ENSG00000153563,CELL_0009
+M1 macrophage,CellMarker2.0,1,CD80,ENSG00000121594,CELL_0008
+Neutrophil,CellMarker2.0,1,CD80,ENSG00000121594,CELL_0016
+CD16+ dendritic cell (CD16+ DC),CellMarker2.0,1,CD86,ENSG00000114013,CELL_0018
+M1 macrophage,CellMarker2.0,1,CD86,ENSG00000114013,CELL_0008
+Neutrophil,CellMarker2.0,1,CD86,ENSG00000114013,CELL_0016
+Macrophage,CellMarker2.0,1,PLAUR,ENSG00000011422,CELL_0027
+Monocyte,CellMarker2.0,1,PLAUR,ENSG00000011422,CELL_0024
+Neutrophil,CellMarker2.0,1,PLAUR,ENSG00000011422,CELL_0016
+CD8 T cell,CellMarker2.0,1,CD8A,ENSG00000153563,CELL_0033
+CD8 T cell,CellMarker2.0,1,CD8B,ENSG00000172116,CELL_0033
+Macrophage,CellMarker2.0,1,CD9,ENSG00000010278,CELL_0027
+Cancer stem cell,CellMarker2.0,1,THY1,ENSG00000154096,CELL_0019
+Cancerous mesenchymal stem cell,CellMarker2.0,1,THY1,ENSG00000154096,CELL_0039
+Cancer stem cell,CellMarker2.0,1,CD93,ENSG00000125810,CELL_0019
+T cell,CellMarker2.0,1,FAS,ENSG00000026103,CELL_0009
+Cancer stem cell,CellMarker2.0,1,CD96,ENSG00000153283,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,CD96,ENSG00000153283,CELL_0020
+Cholangiocyte,CellMarker2.0,1,KRT7,ENSG00000135480,CELL_0040
+Conventional dendritic cell 1(cDC1),CellMarker2.0,1,CLEC9A,ENSG00000197992,CELL_0006
+Cancer stem cell,CellMarker2.0,1,CLEC12A,ENSG00000172322,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,COLEC10,ENSG00000184374,CELL_0020
+Dendritic cell,CellMarker2.0,1,CST3,ENSG00000101439,CELL_0041
+Macrophage,CellMarker2.0,1,CTSB,ENSG00000164733,CELL_0027
+M1 macrophage,CellMarker2.0,1,CXCL10,ENSG00000169245,CELL_0008
+Cancer stem cell,CellMarker2.0,1,CXCR4,ENSG00000121966,CELL_0019
+T helper(Th) cell,CellMarker2.0,1,CXCR5,ENSG00000160683,CELL_0042
+M2 macrophage,CellMarker2.0,1,CLEC4A,ENSG00000111729,CELL_0026
+Immune cells,CellMarker2.0,1,DGKQ,ENSG00000145214,CELL_0002
+Natural killer cell,CellMarker2.0,1,DUSP12,ENSG00000081721,CELL_0025
+Eosinophil,CellMarker2.0,1,ADGRE1,ENSG00000174837,CELL_0007
+Cancerous CD4+ T cell,CellMarker2.0,1,EN1,ENSG00000163064,CELL_0043
+Epithelial cell,CellMarker2.0,1,EPCAM,ENSG00000119888,CELL_0044
+Cancerous epithelial stem cell,CellMarker2.0,1,EPCAM,ENSG00000119888,CELL_0045
+Dendritic cell,CellMarker2.0,2,FCER1A,ENSG00000179639,CELL_0041
+Monocyte,CellMarker2.0,2,FCGR3A,ENSG00000203747,CELL_0024
+M2 macrophage,CellMarker2.0,1,RETNLB,ENSG00000163515,CELL_0026
+Natural killer cell,CellMarker2.0,1,FOS,ENSG00000170345,CELL_0025
+Regulatory T(Treg) cell,CellMarker2.0,1,FOXP3,ENSG00000049768,CELL_0021
+Hematopoietic stem cell,CellMarker2.0,1,GATA1,ENSG00000102145,CELL_0000
+Regulatory T(Treg) cell,CellMarker2.0,1,TNFRSF18,ENSG00000186891,CELL_0021
+Natural killer cell,CellMarker2.0,1,GNLY,ENSG00000115523,CELL_0025
+Hematopoietic stem cell,CellMarker2.0,1,GYPE,ENSG00000197465,CELL_0000
+Natural killer cell,CellMarker2.0,1,GZMK,ENSG00000113088,CELL_0025
+Cancerous CD8+ T cell,CellMarker2.0,1,ICOS,ENSG00000163600,CELL_0030
+Cancerous CD4+ T cell,CellMarker2.0,1,IKZF2,ENSG00000030419,CELL_0043
+M2 macrophage,CellMarker2.0,1,IL1B,ENSG00000125538,CELL_0026
+T helper 17(Th17) cell,CellMarker2.0,1,IL17A,ENSG00000112115,CELL_0046
+T helper 17(Th17) cell,CellMarker2.0,1,IL6,ENSG00000136244,CELL_0046
+Cancerous M2 macrophage,CellMarker2.0,1,IL10,ENSG00000136634,CELL_0047
+Macrophage,CellMarker2.0,1,IL18,ENSG00000150782,CELL_0027
+Monocyte,CellMarker2.0,1,IL18,ENSG00000150782,CELL_0024
+T cell,CellMarker2.0,1,IL2RA,ENSG00000134460,CELL_0009
+CD4+ T cell,CellMarker2.0,1,IL7R,ENSG00000168685,CELL_0032
+Natural killer cell,CellMarker2.0,1,IL7R,ENSG00000168685,CELL_0025
+Natural killer cell,CellMarker2.0,1,JUN,ENSG00000177606,CELL_0025
+Mast cell,CellMarker2.0,1,KIT,ENSG00000157404,CELL_0011
+Progenitor cell,CellMarker2.0,1,KIT,ENSG00000157404,CELL_0012
+Natural killer cell,CellMarker2.0,1,KLRC1,ENSG00000134545,CELL_0025
+Immune cells,CellMarker2.0,1,KPNA4,ENSG00000186432,CELL_0002
+Cholangiocyte,CellMarker2.0,1,KRT7,ENSG00000135480,CELL_0040
+Macrophage,CellMarker2.0,1,LGALS3,ENSG00000131981,CELL_0027
+Dendritic cell,CellMarker2.0,1,LILRA4,ENSG00000239961,CELL_0041
+Monocyte,CellMarker2.0,1,LYZ,ENSG00000090382,CELL_0024
+Melanocyte,CellMarker2.0,1,MLANA,ENSG00000120215,CELL_0001
+B cell,CellMarker2.0,2,MS4A1,ENSG00000156738,CELL_0004
+Monocyte,CellMarker2.0,1,MS4A4A,ENSG00000110079,CELL_0024
+Immune cells,CellMarker2.0,1,NAB1,ENSG00000138386,CELL_0002
+Natural killer cell,CellMarker2.0,1,NCR1,ENSG00000278025,CELL_0025
+Natural killer cell,CellMarker2.0,2,NKG7,ENSG00000105374,CELL_0025
+Macrophage,CellMarker2.0,1,CCM2,ENSG00000136280,CELL_0027
+Monocyte,CellMarker2.0,1,CCM2,ENSG00000136280,CELL_0024
+Megakaryocyte,CellMarker2.0,1,PPBP,ENSG00000163736,CELL_0034
+Stem cell,CellMarker2.0,1,PROCR,ENSG00000101000,CELL_0048
+Macrophage,CellMarker2.0,1,S100A12,ENSG00000163221,CELL_0027
+Monocyte,CellMarker2.0,1,S100A12,ENSG00000163221,CELL_0024
+Cancer cell,CellMarker2.0,1,SAMHD1,ENSG00000101347,CELL_0049
+Cancer stem cell,CellMarker2.0,1,CXCL12,ENSG00000107562,CELL_0019
+Natural killer cell,CellMarker2.0,1,SELL,ENSG00000188404,CELL_0025
+Eosinophil,CellMarker2.0,1,SIGLEC8,ENSG00000105366,CELL_0007
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,SIGLEC1,ENSG00000088827,CELL_0003
+Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CellMarker2.0,1,CD22,ENSG00000012124,CELL_0017
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,CD22,ENSG00000012124,CELL_0003
+Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CellMarker2.0,1,SIGLEC6,ENSG00000105492,CELL_0017
+Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CellMarker2.0,1,SIGLEC6,ENSG00000105492,CELL_0003
+Conventional dendritic cell 2-A (cDC2-A),CellMarker2.0,1,SIRPA,ENSG00000198053,CELL_0013
+CD16+ dendritic cell (CD16+ DC),CellMarker2.0,1,SECISBP2L,ENSG00000138593,CELL_0018
+Cancerous CD4+ T cell,CellMarker2.0,1,CCDC169-SOHLH2,ENSG00000250709,CELL_0043
+Macrophage,CellMarker2.0,1,CXXC1,ENSG00000154832,CELL_0027
+Cancer stem cell,CellMarker2.0,1,HAVCR2,ENSG00000135077,CELL_0019
+Leukemic stem cell,CellMarker2.0,1,HAVCR2,ENSG00000135077,CELL_0020
+M1 macrophage,CellMarker2.0,1,TLR2,ENSG00000137462,CELL_0008
+M1 macrophage,CellMarker2.0,1,TLR4,ENSG00000136869,CELL_0008
+Cancerous M1 macrophage,CellMarker2.0,1,TNF,ENSG00000228321,CELL_0050
+M2 macrophage,CellMarker2.0,1,TNFSF10,ENSG00000121858,CELL_0026
+Macrophage,CellMarker2.0,1,TREM2,ENSG00000095970,CELL_0027
+Natural killer cell,CellMarker2.0,1,XCL1,ENSG00000143184,CELL_0025
+Conventional dendritic cell 1(cDC1),CellMarker2.0,1,XCR1,ENSG00000173578,CELL_0006
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,ALAS2,ENSG00000158578,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,12,AQP1,ENSG00000240583,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,CCNA2,ENSG00000145386,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,PKLR,ENSG00000262785,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HBB,ENSG00000244734,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HBA1,ENSG00000206172,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HBA2,ENSG00000188536,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HBG1,ENSG00000213934,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HBG2,ENSG00000196565,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,10,CD36,ENSG00000135218,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,GYPA,ENSG00000170180,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,7,ITGA4,ENSG00000115232,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,GYPB,ENSG00000250361,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,AHSP,ENSG00000169877,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HBM,ENSG00000206177,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,FECH,ENSG00000066926,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,4,EPOR,ENSG00000187266,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,BPGM,ENSG00000172331,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,DCAF12,ENSG00000198876,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HBD,ENSG00000223609,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HEMGN,ENSG00000136929,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HMBS,ENSG00000256269,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,NCOA4,ENSG00000266412,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,RBM38,ENSG00000132819,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,TMCC2,ENSG00000133069,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,SLC4A1,ENSG00000004939,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,SLC25A39,ENSG00000013306,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,SLC25A37,ENSG00000147454,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,FOSB,ENSG00000125740,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,HTATSF1,ENSG00000102241,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,EPB41,ENSG00000159023,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,RSAD2,ENSG00000134321,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,5,APOA1,ENSG00000118137,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,ALAD,ENSG00000148218,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,11,S100A9,ENSG00000163220,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,12,S100A8,ENSG00000143546,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,ERMAP,ENSG00000164010,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,4,KCNN4,ENSG00000104783,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,PAN3,ENSG00000152520,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,VAMP5,ENSG00000168899,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,PNPO,ENSG00000108439,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,TSPO2,ENSG00000112212,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,RHD,ENSG00000187010,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,KLF1,ENSG00000105610,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,EPB42,ENSG00000166947,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,9,CD44,ENSG00000026508,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,CD47,ENSG00000196776,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,7,CD55,ENSG00000196352,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,2,GYPC,ENSG00000136732,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,KEL,ENSG00000276615,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,RHAG,ENSG00000112077,CELL_0051
+Erythroid-like and erythroid precursor cells,PanglaoDB,1,SNCA,ENSG00000145335,CELL_0051
+Platelets,PanglaoDB,6,CCL5,ENSG00000274233,CELL_0052
+Platelets,PanglaoDB,3,ITGA2B,ENSG00000005961,CELL_0052
+Platelets,PanglaoDB,4,ITGB3,ENSG00000259207,CELL_0052
+Platelets,PanglaoDB,3,PF4,ENSG00000163737,CELL_0052
+Platelets,PanglaoDB,3,F13A1,ENSG00000124491,CELL_0052
+Platelets,PanglaoDB,4,THBS1,ENSG00000137801,CELL_0052
+Platelets,PanglaoDB,3,BIN2,ENSG00000110934,CELL_0052
+Platelets,PanglaoDB,1,FERMT3,ENSG00000149781,CELL_0052
+Platelets,PanglaoDB,2,PTCRA,ENSG00000171611,CELL_0052
+Platelets,PanglaoDB,1,TUBB1,ENSG00000101162,CELL_0052
+Platelets,PanglaoDB,2,GP9,ENSG00000169704,CELL_0052
+Platelets,PanglaoDB,2,NCOA4,ENSG00000266412,CELL_0052
+Platelets,PanglaoDB,4,RGS18,ENSG00000150681,CELL_0052
+Platelets,PanglaoDB,2,PPBP,ENSG00000163736,CELL_0052
+Platelets,PanglaoDB,3,DAB2,ENSG00000153071,CELL_0052
+Platelets,PanglaoDB,18,CXCR4,ENSG00000121966,CELL_0052
+Platelets,PanglaoDB,3,CLEC1B,ENSG00000165682,CELL_0052
+Platelets,PanglaoDB,2,TREML1,ENSG00000161911,CELL_0052
+Platelets,PanglaoDB,3,PLEK,ENSG00000115956,CELL_0052
+Platelets,PanglaoDB,6,CD9,ENSG00000010278,CELL_0052
+Platelets,PanglaoDB,6,NRGN,ENSG00000154146,CELL_0052
+Platelets,PanglaoDB,1,OST4,ENSG00000228474,CELL_0052
+Platelets,PanglaoDB,5,SPARC,ENSG00000113140,CELL_0052
+Platelets,PanglaoDB,1,GPX1,ENSG00000233276,CELL_0052
+Platelets,PanglaoDB,1,CAVIN2,ENSG00000168497,CELL_0052
+Platelets,PanglaoDB,1,PPDPF,ENSG00000125534,CELL_0052
+Platelets,PanglaoDB,7,MYL9,ENSG00000101335,CELL_0052
+Platelets,PanglaoDB,2,MAP3K7CL,ENSG00000156265,CELL_0052
+Platelets,PanglaoDB,3,PTGS1,ENSG00000095303,CELL_0052
+Platelets,PanglaoDB,2,GNG11,ENSG00000127920,CELL_0052
+Platelets,PanglaoDB,2,GRAP2,ENSG00000100351,CELL_0052
+Platelets,PanglaoDB,2,CTSA,ENSG00000064601,CELL_0052
+Platelets,PanglaoDB,1,MPIG6B,ENSG00000230060,CELL_0052
+Platelets,PanglaoDB,1,HIST1H3H,ENSG00000278828,CELL_0052
+Platelets,PanglaoDB,2,WIPF1,ENSG00000115935,CELL_0052
+Platelets,PanglaoDB,1,C2ORF88,ENSG00000187699,CELL_0052
+Platelets,PanglaoDB,1,ARHGDIB,ENSG00000111348,CELL_0052
+Platelets,PanglaoDB,1,CDKN2D,ENSG00000129355,CELL_0052
+Platelets,PanglaoDB,2,HLA-A,ENSG00000227715,CELL_0052
+Platelets,PanglaoDB,1,PDLIM1,ENSG00000107438,CELL_0052
+Platelets,PanglaoDB,1,SMOX,ENSG00000088826,CELL_0052
+Platelets,PanglaoDB,2,SRGN,ENSG00000122862,CELL_0052
+Platelets,PanglaoDB,1,SH3BGRL2,ENSG00000198478,CELL_0052
+Platelets,PanglaoDB,1,RAP1B,ENSG00000127314,CELL_0052
+Platelets,PanglaoDB,2,FHL1,ENSG00000022267,CELL_0052
+Platelets,PanglaoDB,1,LAPTM5,ENSG00000162511,CELL_0052
+Platelets,PanglaoDB,3,RASGRP2,ENSG00000068831,CELL_0052
+Platelets,PanglaoDB,2,ILK,ENSG00000166333,CELL_0052

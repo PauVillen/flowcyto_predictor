@@ -1,0 +1,271 @@
+﻿Species,Tissue Class,Tissue Type,Cancer,Cell name,Cell marker,Source,Supports,Detail
+Human,Blood,Blood,Normal cell,Hematopoietic stem cell,Alas2,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Melanocyte,ALCAM,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Immune cells,ARL14,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),Axl,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,B cell,B220,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),BDCA-2,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Plasmacytoid dendritic cell(pDC),BDCA-2,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Plasmacytoid dendritic cell(pDC),BDCA-4,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,C-type lectin-like receptor dectin-1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 1(cDC1),CADM1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Eosinophil,CCR3,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CCR7,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Plasmacytoid dendritic cell(pDC),CCR7,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD103,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Tissue resident memory T(TRM) cell,CD103,Review,1,DETAIL
+Human,Blood,Umbilical cord blood,Normal cell,Mesenchymal stem cell,CD105,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Mast cell,CD117,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Progenitor cell,CD117,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),CD11b,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-B (cDC2-B),CD11b,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Eosinophil,CD11b,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous myeloid derived suppressor cell (MDSC),CD11b,Review,1,DETAIL
+Human,Blood,Serum,Cancer cell,Cancerous myeloid derived suppressor cell (MDSC),CD11b,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Neutrophil,CD11b,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CD11c,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD16+ dendritic cell (CD16+ DC),CD11c,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),CD11c,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-B (cDC2-B),CD11c,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Neutrophil,CD11c,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CD123,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD123,Review,2,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CD123,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Plasmacytoid dendritic cell(pDC),CD123,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CD127,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Regulatory T(Treg) cell,CD127,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Platelet,CD128,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD133,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Plasma cell,CD138,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,CD14,Review,3,DETAIL
+Human,Blood,Peripheral blood,Cancer cell,Cancerous myeloid derived suppressor cell (MDSC),CD14,Review,1,DETAIL
+Human,Blood,Serum,Cancer cell,Cancerous myeloid derived suppressor cell (MDSC),CD14,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 1(cDC1),CD141,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Platelet,CD154,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD157,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CD157,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD16+ dendritic cell (CD16+ DC),CD16,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CD16,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,CD16,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Neutrophil,CD16,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-B (cDC2-B),CD163,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,CD163,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,CD163,Review,3,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,CD163,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Hematopoietic stem cell,CD164,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,CD169,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Neutrophil,CD177,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,CD184,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,B cell,CD19,Review,4,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD197,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),CD1c,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-B (cDC2-B),CD1c,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CD2,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CD2,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Innate lymphoid cell,CD200R,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,CD204,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,CD206,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,CD206,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,CD209,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,CD23,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Red blood cell (erythrocyte),CD235a,Review,2,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD244,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CD244,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD25,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Regulatory T(Treg) cell,CD25,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD26,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD8+ T cell,CD27,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Memory B cell,CD27,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD27,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD8+ T cell,CD28,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD4+ T cell,CD3,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD8+ T cell,CD3,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Lymphocyte,CD3,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD3,Review,3,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CD32,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),CD32b,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CD33,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD33,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 1(cDC1),CD33,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),CD33,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-B (cDC2-B),CD33,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CD33,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous myeloid derived suppressor cell (MDSC),CD33,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Natural killer cell,CD337,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD34,Review,2,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous myeloid derived suppressor cell (MDSC),CD34,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Progenitor cell,CD34,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-B (cDC2-B),CD36,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,CD36,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Plasma cell,CD38,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD4+ T cell,CD3D,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD8 T cell,CD3D,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD3E,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Megakaryocyte,CD41,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Platelet,CD41,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Platelet,CD41a,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Megakaryocyte,CD42,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Platelet,CD42,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD44,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,CD44,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Leukocyte,CD45,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Lymphocyte,CD45,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Neutrophil,CD45,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CD45RA,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Memory CD4 T cell,CD45RA,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Plasmacytoid dendritic cell(pDC),CD45RA,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD45RA,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Memory CD4 T cell,CD45RO,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Circulating tumour cell (CTC),CD46,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD47,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CD47,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Regulatory T(Treg) cell,CD49d,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),CD5,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),CD5,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,B cell,CD5,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),CD5,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD56,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,CD56,Review,3,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Natural killer cell,CD56,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Effector T(Teff) cell,CD57,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,CD57,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Megakaryocyte,CD61,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CD62,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Neutrophil,CD62L,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CD64,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Neutrophil,CD66b,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,CD69,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD69,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Tissue resident memory T(TRM) cell,CD69,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD7,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CD7,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,B cell,CD79,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,B cell,CD79A,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Plasma cell,CD79A,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD8,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CD80,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Neutrophil,CD80,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD16+ dendritic cell (CD16+ DC),CD86,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CD86,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Neutrophil,CD86,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,CD87,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,CD87,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Neutrophil,CD87,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD8 T cell,CD8A,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD8 T cell,CD8B,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,CD9,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD90,Review,1,DETAIL
+Human,Blood,Serum,Cancer cell,Cancerous mesenchymal stem cell,CD90,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD93,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,CD95,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CD96,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CD96,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Cholangiocyte,CK7,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,CLACSF13,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 1(cDC1),Clec9a,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CLL-1,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,CLL1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Dendritic cell,CST3,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Regulatory T(Treg) cell,CTLA,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,CTSB,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,CXCL10,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,CXCR4,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T helper(Th) cell,CXCR5,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Circulating tumour cell (CTC),cytokeratins,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Circulating tumour cell (CTC),DAPI,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,DCIR,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Immune cells,DGKQ,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,DUSP1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Eosinophil,EMR1,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD4+ T cell,EN1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Epithelial cell,EpCAM,Review,1,DETAIL
+Human,Blood,Serum,Cancer cell,Cancerous epithelial stem cell,EpCAM,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Dendritic cell,FCER1A,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,FCGR3A,Review,2,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,FIZZ1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,FOS,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD4+ T cell,FOX,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Regulatory T(Treg) cell,FOXP3,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Hematopoietic stem cell,Gata1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Regulatory T(Treg) cell,GITR,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,GNLY,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Hematopoietic stem cell,Gypa,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,GZMK,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Hematopoietic stem cell,Hba-a1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),HLA-DR,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),HLA-DR,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD16+ dendritic cell (CD16+ DC),HLA-DR,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD8+ T cell,HLA-DR,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 1(cDC1),HLA-DR,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),HLA-DR,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-B (cDC2-B),HLA-DR,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,Neutrophil,HLA-DR,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD8+ T cell,ICOS,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T helper 1(Th1) cell,IFN-y,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD4+ T cell,IKZF2,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,IL-1,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,IL-15R,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T helper 17(Th17) cell,IL-17,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,IL-17R,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,IL-1R-1,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,IL-1RAP,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,IL-2R,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Eosinophil,IL-5Ra,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T helper 17(Th17) cell,IL-6,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,IL-RAP,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous M2 macrophage,IL10,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,IL18,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,IL18,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,T cell,IL2RA,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD4+ T cell,IL7R,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,IL7R,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,JUN,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Hematopoietic stem cell,Kfl1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Mast cell,KIT,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Progenitor cell,KIT,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,KLRC1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Immune cells,KPNA4,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Cholangiocyte,KRT7,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,LGALS3,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Dendritic cell,LILRA4,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,LYZ,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,M60,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Melanocyte,MLANA,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,B cell,MS4A1,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,MS4A7,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Immune cells,NAB1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,NCR1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,NKG7,Review,2,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,OSM,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,OSM,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Megakaryocyte,PPBP,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Stem cell,Procr,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD4+ T cell,rs75712673,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,S100A12,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,S100A12,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer cell,SAMHD1,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,SDF1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,SELL,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Eosinophil,Siglec-8,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),Siglec1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),Siglec2,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),Siglec2,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC),Siglec6,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC),Siglec6,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 2-A (cDC2-A),SIRPa,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,CD16+ dendritic cell (CD16+ DC),Slan,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD4+ T cell,SOHLH2,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous CD4+ T cell,SOX,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,SPP1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,TGF-a,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Monocyte,TGF-a,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancer stem cell,TIM3,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Leukemic stem cell,TIM3,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,TLR2,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M1 macrophage,TLR4,Review,1,DETAIL
+Human,Blood,Blood,Cancer cell,Cancerous M1 macrophage,TNFa,Review,1,DETAIL
+Human,Blood,Peripheral blood,Normal cell,M2 macrophage,TRAIL,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Macrophage,TREM2,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Mast cell,tryptase,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Natural killer cell,XCL1,Review,1,DETAIL
+Human,Blood,Blood,Normal cell,Conventional dendritic cell 1(cDC1),XCR1,Review,1,DETAIL
