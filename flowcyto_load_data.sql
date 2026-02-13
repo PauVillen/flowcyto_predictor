@@ -1,4 +1,4 @@
-USE mydb;
+USE flowcyto_db;
 -- Run the script selecting part by part, not all at once
 
 -- -----------------------------------------------------
