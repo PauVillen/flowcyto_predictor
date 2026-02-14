@@ -1,1 +1,22 @@
-## 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlowCyto</title>
+</head>
+<body>
+
+    <h1> FlowCyto cell-type predictor</h1>
+    
+    <form method="POST" action="/buscar"></form>
+        <fieldset>
+            <legend> Insert the query genes in ENSMBL code format</legend>
+        <label for="name">Query genes:</label>
+        <input type="text" id="genes_input" name="genes_input" />
+            <br><br>
+            <button type="submit">Predict</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+
