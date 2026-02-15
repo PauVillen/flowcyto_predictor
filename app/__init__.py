@@ -4,7 +4,7 @@ from app.database import db
 
 def create_app():
     app = Flask(__name__)
-    
+
     ## change your_password for your MySQL password
     ## flowcyto_db is the database name by default
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:your_password@localhost/flowcyto_db'
@@ -15,5 +15,6 @@ def create_app():
     
     with app.app_context():
         from . import routes     ## importamos las rutas aquí para evitar importaciones circulares
-        
+
     return app
+
