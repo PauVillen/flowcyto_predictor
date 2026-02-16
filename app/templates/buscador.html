@@ -1,22 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>FlowCyto</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Search · FlowCyto{% endblock %}
 
-    <h1> FlowCyto cell-type predictor</h1>
-    
-    <form method="POST" action="/buscar"></form>
-        <fieldset>
-            <legend> Insert the query genes in ENSMBL code format</legend>
-        <label for="name">Query genes:</label>
-        <input type="text" id="genes_input" name="genes_input" />
-            <br><br>
-            <button type="submit">Predict</button>
-        </fieldset>
-    </form>
-</body>
-</html>
+{% block content %}
+<section class="card">
+  <h1>Cell-type predictor</h1>
 
+  <p class="muted">
+    Enter gene symbols separated by commas (HGNC). Example:
+    <span class="badge">MS4A1</span>, <span class="badge">CCR7</span>, <span class="badge">IL7R</span>
+  </p>
+
+  <form method="POST" action="{{ url_for('search') }}">
+    <div class="form-row">
+      <label for="genes_input">Query genes</label>
+      <input type="text" id="genes_input" name="genes_input"
+             placeholder="MS4A1, CCR7, IL7R" required>
+    </div>
+
+    <div class="actions">
+      <button type="submit">Predict</button>
+      <button class="secondary" type="reset">Clear</button>
+    </div>
+  </form>
+
+  {% if genes_buscados %}
+    <p class="muted" style="margin-top:14px;">
+      Query: {{ genes_buscados | join(", ") }}
+    </p>
+  {% endif %}
+
+  {% if resultados %}
+    <h2 style="margin-top:18px;">Top results</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Cell type</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in resultados %}
+          <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  {% if error %}
+    <p class="muted" style="margin-top:14px;">{{ error }}</p>
+  {% endif %}
+</section>
+{% endblock %}
