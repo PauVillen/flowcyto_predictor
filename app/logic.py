@@ -27,6 +27,9 @@ def get_cell_ranking(lista_genes, user_email=None):
         
         # Si hay resultados y tenemos un usuario, guardamos en la DB
         if ranking and user_email:
+            # Sumamos todos los 'total_score' 
+            suma_total_scores = sum(row.total_score for row in ranking)
+
             # Convertimos la lista ['CD4', 'CD8'] en un string "CD4, CD8"
             genes_string = ", ".join(lista_genes)
         
@@ -37,11 +40,16 @@ def get_cell_ranking(lista_genes, user_email=None):
 
             # Guardamos cada línea del ranking en la tabla Result
             for row in ranking:
+
+                prob = 0
+                if suma_total_scores > 0:
+                    prob = (row.total_score / suma_total_scores) * 100
+
                 nuevo_resultado = Result(
                     prediction_id=nueva_prediccion.prediction_id,
                     cell_type_id=row.cell_type_id,
                     score=row.total_score,
-                    probability_pct=None # De momento no calculamos %
+                    probability_pct=round(prob, 2) # Redondeamos probabilidad a 2 decimales
                 )
                 db.session.add(nuevo_resultado)
         
