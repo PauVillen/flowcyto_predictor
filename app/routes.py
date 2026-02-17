@@ -28,6 +28,31 @@ def login():
             
     return render_template('login.html')
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        
+        # Comprobar si el usuario ya existe
+        user = User.query.filter_by(user_email=email).first()
+        if user:
+            return render_template('register.html', error="Already existing email.")
+
+        # Crear el nuevo usuario
+        new_user = User(user_email=email, user_password=password)
+        
+        # Guardar en la base de datos
+        try:
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect(url_for('login')) # Si sale bien, al login
+        except Exception as e:
+            db.session.rollback()
+            return render_template('register.html', error="Error in register.")
+
+    return render_template('register.html')
+
 @app.route('/logout')
 def logout():
     session.clear() # Borramos la sesión
