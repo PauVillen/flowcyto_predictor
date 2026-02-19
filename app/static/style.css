@@ -77,8 +77,8 @@ body{
 
 /* Logo image sizing */
 .brand-logo{
-  width: 100px;           /* change to 80px if you prefer */
-  height: 100px;
+  width: 150px;           /* change to 80px if you prefer */
+  height: 150px;
   object-fit: contain;
   display: block;
 }

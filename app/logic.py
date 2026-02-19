@@ -54,11 +54,25 @@ def get_cell_ranking(lista_genes, user_email=None):
                 db.session.add(nuevo_resultado)
         
             db.session.commit() # Guardamos todo de golpe en MySQL
-    
-        return ranking
+
+        # Calculamos probabilidades para devolver al frontend
+        # Usamos float() porque MySQL devuelve tipo Decimal
+        suma_total_scores = float(sum(row.total_score for row in ranking))
+        resultado_final = []
+        for row in ranking:
+            score = float(row.total_score)
+            prob = round((score / suma_total_scores) * 100, 2) if suma_total_scores > 0 else 0.0
+            resultado_final.append({
+                'cell_name': row.cell_name,
+                'score': round(score, 2),
+                'probability': prob
+            })
+
+        return resultado_final
     
     except Exception as e:
-        db.session.rollback() # Importante: si algo falla, deshacemos los cambios
-        # Si hay un error de conexión o de SQL, lo imprimimos para saber qué pasa
-        print(f"Error en la consulta de ranking: {e}")
+        db.session.rollback()
+        import traceback
+        traceback.print_exc()  # muestra el error completo en la terminal
+        print(f"Error en get_cell_ranking: {e}")
         return []

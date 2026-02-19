@@ -36,13 +36,15 @@
         <tr>
           <th>Cell type</th>
           <th>Score</th>
+          <th>Probability (%)</th>
         </tr>
       </thead>
       <tbody>
         {% for row in resultados %}
           <tr>
-            <td>{{ row[1] }}</td>
-            <td>{{ row[2] }}</td>
+            <td>{{ row.cell_name }}</td>
+            <td>{{ row.score }}</td>
+            <td>{{ row.probability }}</td>
           </tr>
         {% endfor %}
       </tbody>
