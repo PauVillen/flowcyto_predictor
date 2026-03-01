@@ -1,0 +1,67 @@
+# Cell type description adding
+setwd("/home/itxaso/projects/flowcyto_predictor/data_processing")
+db <- read.csv("final_db.csv", header = T)
+
+celltype_df <- data.frame(
+  CellType = unique(db$Cell.type),
+  Description = "hola"
+)
+
+cell_descriptions <- c(
+  "Hematopoietic stem cell" = "Multipotent stem cell in bone marrow that gives rise to all blood cell lineages through self-renewal and differentiation.",
+  "Melanocyte" = "Pigment-producing cell not typically present in blood; included as a non-hematopoietic reference population.",
+  "Immune cells" = "Circulating and tissue-associated hematopoietic cells mediating innate and adaptive immune responses.",
+  "Axl+ CD123+ Plasmacytoid dendritic cell (CD123+ Axl+DC)" = "Circulating plasmacytoid dendritic cell subset with intermediate activation features.",
+  "B cell" = "Circulating adaptive lymphocyte responsible for humoral immune responses and antibody production.",
+  "Plasmacytoid dendritic cell(pDC)" = "Rare circulating dendritic cell specialized in antiviral immune responses.",
+  "Conventional dendritic cell 1(cDC1)" = "Blood and tissue dendritic cell subset specialized in antigen cross-presentation.",
+  "Eosinophil" = "Circulating granulocyte involved in antiparasitic and allergic inflammatory responses.",
+  "M1 macrophage" = "Pro-inflammatory macrophage derived from blood monocytes in inflammatory contexts.",
+  "T cell" = "Circulating adaptive lymphocyte mediating cellular immune responses.",
+  "Tissue resident memory T(TRM) cell" = "Memory T cell primarily residing in tissues, derived from circulating T cells.",
+  "Mast cell" = "Tissue-resident hematopoietic cell involved in allergic and inflammatory responses.",
+  "Progenitor cell" = "Hematopoietic precursor with limited self-renewal capacity committed to specific blood lineages.",
+  "Conventional dendritic cell 2-A (cDC2-A)" = "Circulating dendritic cell subset involved in helper T cell priming.",
+  "Conventional dendritic cell 2-B (cDC2-B)" = "Functional subset of circulating cDC2 associated with inflammatory modulation.",
+  "Cancerous myeloid derived suppressor cell (MDSC)" = "Pathological immature myeloid cell in blood with immunosuppressive activity in cancer.",
+  "Neutrophil" = "Most abundant circulating granulocyte involved in acute inflammatory and antibacterial responses.",
+  "Axl+ CD11c+ Plasmacytoid dendritic cell (CD11c+ Axl+DC)" = "Circulating pDC-related subset with intermediate dendritic cell features.",
+  "CD16+ dendritic cell (CD16+ DC)" = "Minor circulating dendritic cell subset with pro-inflammatory properties.",
+  "Cancer stem cell" = "Tumor-derived stem-like cell that may circulate in blood in advanced malignancy.",
+  "Leukemic stem cell" = "Malignant hematopoietic stem cell driving leukemia initiation and persistence in bone marrow and blood.",
+  "Regulatory T(Treg) cell" = "Circulating CD4+ T cell subset maintaining immune tolerance and suppressing immune activation.",
+  "Platelet" = "Anucleate blood component derived from megakaryocytes, essential for hemostasis.",
+  "Plasma cell" = "Antibody-secreting B cell that may circulate transiently or reside in bone marrow.",
+  "Monocyte" = "Circulating myeloid precursor that differentiates into macrophages or dendritic cells in tissues.",
+  "Natural killer cell" = "Circulating innate lymphocyte with cytotoxic activity against infected or transformed cells.",
+  "M2 macrophage" = "Alternatively activated macrophage derived from monocytes, associated with tissue repair and tumor support.",
+  "Macrophage" = "Differentiated monocyte-derived phagocytic cell primarily residing in tissues.",
+  "Innate lymphoid cell" = "Rare circulating or tissue-resident innate lymphocyte contributing to early immune responses.",
+  "Red blood cell (erythrocyte)" = "Anucleate circulating cell specialized in oxygen and carbon dioxide transport.",
+  "Cancerous CD8+ T cell" = "Malignant or tumor-associated cytotoxic T cell detected in hematologic or circulating contexts.",
+  "Memory B cell" = "Long-lived circulating B cell enabling rapid antibody responses upon antigen re-exposure.",
+  "CD4+ T cell" = "Circulating helper T lymphocyte coordinating adaptive immune responses.",
+  "CD8 T cell" = "Circulating cytotoxic T lymphocyte specialized in elimination of infected or malignant cells.",
+  "Megakaryocyte" = "Bone marrow hematopoietic cell responsible for platelet production.",
+  "Leukocyte" = "General term for nucleated blood-derived immune cells.",
+  "Lymphocyte" = "Circulating leukocyte including T, B, and NK cells, central to adaptive and innate immunity.",
+  "Circulating tumour cell (CTC)" = "Tumor-derived cell detected in peripheral blood following detachment from a primary or metastatic site.",
+  "Effector T(Teff) cell" = "Activated circulating T cell with immediate immune effector function.",
+  "Cancerous mesenchymal stem cell" = "Mesenchymal-like malignant cell potentially detected in circulation or tumor-associated blood samples.",
+  "Cholangiocyte" = "Bile duct epithelial cell not normally present in blood; may appear in pathological circulating contexts.",
+  "Dendritic cell" = "Circulating or tissue-migratory antigen-presenting cell linking innate and adaptive immunity.",
+  "T helper(Th) cell" = "Functional subset of circulating CD4+ T cells orchestrating immune responses.",
+  "Cancerous CD4+ T cell" = "Malignant or tumor-associated helper T cell identified in hematologic or circulating samples.",
+  "Epithelial cell" = "Non-hematopoietic structural cell not typically present in blood except in pathological conditions.",
+  "Cancerous epithelial stem cell" = "Tumor-derived epithelial stem-like cell that may be detected in circulation.",
+  "T helper 17(Th17) cell" = "Circulating CD4+ T cell subset associated with inflammatory immune responses.",
+  "Cancerous M2 macrophage" = "Tumor-associated M2-like macrophage detected in hematologic or tumor-derived samples.",
+  "Stem cell" = "Undifferentiated cell with self-renewal capacity; in blood context typically refers to hematopoietic stem cells.",
+  "Cancer cell" = "Malignant cell that may be detected in blood in hematologic cancers or advanced solid tumors.",
+  "Cancerous M1 macrophage" = "Tumor-associated M1-like macrophage with pro-inflammatory characteristics.",
+  "Erythroid-like and erythroid precursor cells" = "Developing erythroid lineage cells typically found in bone marrow and occasionally in peripheral blood under stress conditions.",
+  "Platelets" = "Circulating anucleate fragments derived from megakaryocytes mediating hemostasis and vascular repair."
+)
+
+
+celltype_df$Description <- cell_descriptions[celltype_df$CellType]
