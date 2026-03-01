@@ -1,58 +1,80 @@
-{% extends "base.html" %}
-{% block title %}Search · FlowCyto{% endblock %}
+{% extends "layout.html" %}
 
 {% block content %}
-<section class="card">
-  <h1>Cell-type predictor</h1>
+<div class="page-dark">
+    <main class="main">
+        <section class="card-dark" id="search-card">
+            <h1>Blood Cell-type predictor</h1>
+            <p class="muted">Enter gene symbols separated by commas (HGNC).</p>
 
-  <p class="muted">
-    Enter gene symbols separated by commas (HGNC). Example:
-    <span class="badge">MS4A1</span>, <span class="badge">CCR7</span>, <span class="badge">IL7R</span>
-  </p>
+            <form method="POST" action="{{ url_for('search') }}" id="predict-form">
+                <div class="form-row">
+                    <label for="genes_input">Query genes</label>
+                    <input type="text" id="genes_input" name="genes_input" placeholder="Ex: MS4A1, CCR7, IL7R" required>
+                </div>
 
-  <form method="POST" action="{{ url_for('search') }}">
-    <div class="form-row">
-      <label for="genes_input">Query genes</label>
-      <input type="text" id="genes_input" name="genes_input"
-             placeholder="MS4A1, CCR7, IL7R" required>
-    </div>
+                <div class="actions">
+                    <button type="submit" class="btn-red" id="submit-btn">Predict</button>
+                    <a href="{{ url_for('search') }}" class="btn-outline" style="text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center;">
+                        Clear
+                    </a>
+                </div>
+            </form>
 
-    <div class="actions">
-      <button type="submit">Predict</button>
-      <button class="secondary" type="reset">Clear</button>
-    </div>
-  </form>
+            <div id="loading-overlay" style="display: none; text-align: center; margin-top: 30px;">
+                <div class="red-spinner"></div>
+                <p class="muted" style="margin-top: 15px;">Analyzing genes, please wait...</p>
+            </div>
 
-  {% if genes_buscados %}
-    <p class="muted" style="margin-top:14px;">
-      Query: {{ genes_buscados | join(", ") }}
-    </p>
-  {% endif %}
+            {% if resultados %}
+                <div class="results-area" style="margin-top: 40px;">
+                    <h2 style="font-size: 1.1rem; font-weight: 400; margin-bottom: 15px;">Top Results</h2>
+                    <table class="table-dark">
+                        <thead>
+                            <tr>
+                                <th>Cell type</th>
+                                <th>Score</th>
+                                <th>Prob %</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in resultados %}
+                            <tr>
+                                <td>{{ row.cell_name }}</td>
+                                <td>{{ row.score }}</td>
+                                <td class="text-red">{{ row.probability }}%</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% endif %}
+        </section>
+    </main>
+</div>
 
-  {% if resultados %}
-    <h2 style="margin-top:18px;">Top results</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Cell type</th>
-          <th>Score</th>
-          <th>Probability (%)</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for row in resultados %}
-          <tr>
-            <td>{{ row.cell_name }}</td>
-            <td>{{ row.score }}</td>
-            <td>{{ row.probability }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  {% endif %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('predict-form');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const submitBtn = document.getElementById('submit-btn');
+        const resultsArea = document.querySelector('.results-area');
 
-  {% if error %}
-    <p class="muted" style="margin-top:14px;">{{ error }}</p>
-  {% endif %}
-</section>
+        if (form) {
+            form.addEventListener('submit', function() {
+                // 1. Mostrar carga
+                loadingOverlay.style.display = 'block';
+                
+                // 2. Deshabilitar botón para evitar doble clic
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Analyzing...';
+
+                // 3. Ocultar resultados previos si existen
+                if (resultsArea) {
+                    resultsArea.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
 {% endblock %}

@@ -1,0 +1,998 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* ════════════════════════════════
+   GAMA DE COLORES
+════════════════════════════════ */
+:root {
+  --red:        #ff1a1a;
+  --red-mid:    #cc0000;
+  --red-dim:    rgba(255,26,26,0.15);
+  --red-glow:   rgba(255,26,26,0.35);
+  --neon:       #ff4444;
+  --grey-1:     #111111;
+  --grey-2:     #1a1a1a;
+  --grey-3:     #2a2a2a;
+  --grey-4:     #444444;
+  --grey-5:     #666666;
+  --text-dim:   #555;
+  --line:       rgba(255,255,255,0.05);
+}
+
+/* ════════════════════════════════
+   BASE
+════════════════════════════════ */
+.fc-home {
+  font-family: 'Rajdhani', sans-serif;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  overflow-x: hidden;
+}
+
+.fc-home * { box-sizing: border-box; }
+
+/* ════════════════════════════════
+   HERO
+════════════════════════════════ */
+.fc-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  position: relative;
+}
+
+/* — Animated ring system behind logo — */
+.rings {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  animation: ringRotate var(--dur, 8s) linear infinite;
+}
+
+.ring-1 {
+  width: 380px; height: 380px;
+  border-color: rgba(255,26,26,0.12);
+  --dur: 20s;
+}
+.ring-2 {
+  width: 315px; height: 315px;
+  border-color: rgba(255,26,26,0.2);
+  border-style: dashed;
+  --dur: 14s;
+  animation-direction: reverse;
+}
+
+/* Orbiting dots on rings */
+.ring::before, .ring::after {
+  content: '';
+  position: absolute;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red), 0 0 16px var(--red-glow);
+  top: 50%; left: -2.5px;
+  transform: translateY(-50%);
+}
+.ring::after {
+  left: auto; right: -2.5px;
+  width: 3px; height: 3px;
+  background: var(--grey-4);
+  box-shadow: none;
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.logo-center {
+  position: relative;
+  z-index: 2;
+  width: 700px;
+  height: 700px;
+  border-radius: 18px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px var(--red-glow));
+  animation: logoPulse 4s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%,100% { filter: drop-shadow(0 0 16px var(--red-glow)); }
+  50%      { filter: drop-shadow(0 0 32px rgba(255,26,26,0.7)); }
+}
+
+/* — Hero text — */
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: var(--red);
+  border: 1px solid rgba(255,26,26,0.25);
+  border-radius: 4px;
+  padding: 5px 14px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.chip-dot {
+  width: 5px; height: 5px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--red);
+  animation: blink 1.6s step-end infinite;
+}
+
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.hero-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin: 0 0 8px;
+  color: #fff;
+  animation: heroReveal 1s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.hero-title .hl { color: var(--red); }
+
+@keyframes heroReveal {
+  from { opacity:0; transform: translateY(24px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+.hero-sub-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 300;
+  color: var(--grey-5);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+  animation: heroReveal 1s 0.1s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.hero-desc {
+  max-width: 520px;
+  font-size: 1rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin: 0 auto 44px;
+  font-weight: 400;
+  animation: heroReveal 1s 0.2s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.hero-desc em { color: #888; font-style: normal; }
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: heroReveal 1s 0.3s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: var(--red);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background: var(--red-mid);
+  box-shadow: 0 0 28px var(--red-glow), 0 0 60px rgba(255,26,26,0.15);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: transparent;
+  color: var(--grey-5);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid var(--grey-3);
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.btn-ghost:hover { border-color: var(--grey-5); color: #fff; }
+
+/* — Scroll hint — */
+.scroll-hint {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: var(--grey-4);
+  text-transform: uppercase;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--grey-5), transparent);
+}
+
+@keyframes scrollBounce {
+  0%,100% { transform: translateY(0); opacity:0.6; }
+  50%      { transform: translateY(6px); opacity:1; }
+}
+
+/* ════════════════════════════════
+   SECTION WRAPPER
+════════════════════════════════ */
+.fc-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 32px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fc-section.visible { opacity:1; transform:translateY(0); }
+
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 4px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.section-eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,26,26,0.4), transparent);
+  max-width: 120px;
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 36px;
+  color: #fff;
+}
+
+.section-title .hl { color: var(--red); }
+
+/* ════════════════════════════════
+   DIVIDER
+════════════════════════════════ */
+.fc-divider {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--grey-2) 20%, var(--grey-2) 80%, transparent);
+  position: relative;
+}
+
+.fc-divider::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  transform: translateX(-50%);
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 10px var(--red);
+}
+
+/* ════════════════════════════════
+   ABOUT — two column
+════════════════════════════════ */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-body {
+  font-size: 1rem;
+  color: var(--grey-5);
+  line-height: 1.85;
+  font-weight: 400;
+}
+
+.about-body p { margin-bottom: 18px; }
+.about-body strong { color: #ccc; font-weight: 600; }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.stat-tile {
+  background: var(--grey-1);
+  border: 1px solid var(--grey-2);
+  padding: 28px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.stat-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--red-dim), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.stat-tile:hover { border-color: rgba(255,26,26,0.3); }
+.stat-tile:hover::before { opacity: 1; }
+
+.stat-tile-num {
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 6px;
+  text-shadow: 0 0 20px var(--red-glow);
+}
+
+.stat-tile-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ════════════════════════════════
+   NEED — problem cards
+════════════════════════════════ */
+.need-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.need-card {
+  background: var(--grey-1);
+  border: 1px solid var(--grey-2);
+  border-radius: 12px;
+  padding: 30px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.need-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--red), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.need-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,26,26,0.25);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,26,26,0.08);
+}
+
+.need-card:hover::after { opacity: 1; }
+
+.need-icon {
+  width: 40px; height: 40px;
+  border: 1px solid var(--grey-3);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  color: var(--red);
+  background: rgba(255,26,26,0.05);
+}
+
+.need-card h3 {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ddd;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+
+.need-card p {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.75;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ════════════════════════════════
+   HOW IT WORKS — process steps
+════════════════════════════════ */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 8px;
+}
+
+/* connecting line between steps */
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: calc(12.5% + 12px);
+  right: calc(12.5% + 12px);
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--grey-3) 0, var(--grey-3) 6px,
+    transparent 6px, transparent 14px
+  );
+  z-index: 0;
+}
+
+.process-step {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-node {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--grey-3);
+  background: var(--grey-1);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Orbitron', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 24px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.step-node::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.process-step:hover .step-node {
+  border-color: var(--red);
+  box-shadow: 0 0 20px var(--red-glow);
+}
+
+.process-step:hover .step-node::after {
+  border-color: rgba(255,26,26,0.2);
+}
+
+.step-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ccc;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.step-desc {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* ════════════════════════════════
+   TEAM — member cards
+════════════════════════════════ */
+.team-intro {
+  font-size: 1rem;
+  color: var(--grey-5);
+  line-height: 1.8;
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.team-intro strong { color: #bbb; font-weight: 600; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.member-card {
+  background: var(--grey-1);
+  border: 1px solid var(--grey-2);
+  border-radius: 14px;
+  padding: 32px 22px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s, transform 0.3s;
+}
+
+/* Corner accent */
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 40px; height: 40px;
+  background: linear-gradient(225deg, rgba(255,26,26,0.15) 0%, transparent 60%);
+  transition: width 0.4s, height 0.4s;
+}
+
+.member-card:hover {
+  border-color: rgba(255,26,26,0.3);
+  transform: translateY(-4px);
+}
+
+.member-card:hover::before { width: 70px; height: 70px; }
+
+/* Node graphic */
+.member-node {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,26,26,0.3);
+  background: rgba(255,26,26,0.06);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: 20px;
+  transition: box-shadow 0.4s, border-color 0.4s;
+}
+
+.member-card:hover .member-node {
+  box-shadow: 0 0 20px var(--red-glow);
+  border-color: var(--red);
+}
+
+.member-name {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.member-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.member-bio {
+  font-size: 0.83rem;
+  color: var(--text-dim);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.member-email {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--grey-4);
+  letter-spacing: 0.5px;
+  border-top: 1px solid var(--grey-2);
+  padding-top: 14px;
+  word-break: break-all;
+}
+
+/* Connection lines decorative SVG between cards */
+.team-connectors {
+  position: relative;
+  height: 30px;
+  margin: -8px 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* ════════════════════════════════
+   FINAL CTA
+════════════════════════════════ */
+.fc-cta {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px 100px;
+}
+
+.cta-inner {
+  background: var(--grey-1);
+  border: 1px solid var(--grey-2);
+  border-radius: 20px;
+  padding: 64px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* radial red glow */
+.cta-inner::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,26,26,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* corner dots */
+.cta-inner::after {
+  content: '';
+  position: absolute;
+  bottom: 16px; right: 24px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,26,26,0.4);
+  box-shadow: -18px 0 0 rgba(255,26,26,0.2), -36px 0 0 rgba(255,26,26,0.1);
+}
+
+.cta-text h2 {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.cta-text p {
+  font-size: 0.95rem;
+  color: var(--grey-5);
+  margin: 0;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════
+   FOOTER
+════════════════════════════════ */
+.fc-footer {
+  text-align: center;
+  padding: 28px 32px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: var(--grey-3);
+  text-transform: uppercase;
+  border-top: 1px solid var(--grey-2);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+@media (max-width: 860px) {
+  .about-layout { grid-template-columns: 1fr; }
+  .need-cards { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .process-steps::before { display: none; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-inner { flex-direction: column; text-align: center; padding: 48px 32px; }
+  .cta-btns { justify-content: center; }
+}
+
+@media (max-width: 500px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+<div class="fc-home">
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="fc-hero">
+
+    <div class="rings">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <img
+        src="{{ url_for('static', filename='img/logo.png') }}"
+        alt="FlowCyto"
+        class="logo-center">
+    </div>
+
+    <div class="hero-chip">
+      <span class="chip-dot"></span>Web Application - developed by DIMP</div>
+
+    <h1 class="hero-title">
+      FLOW<span class="hl">CYTO</span>
+    </h1>
+    <p class="hero-sub-title">Blood Cell-type identification tool</p>
+
+    <p class="hero-desc">
+      Input a panel of gene markers and get a <em>ranked, scored, probabilistic</em> prediction 
+      of the cell populations present — powered by the CellMarker 2.0 DataBase.
+    </p>
+
+    <div class="hero-actions">
+      <a href="{{ url_for('search') }}" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Launch predictor
+      </a>
+      <a href="{{ url_for('register') }}" class="btn-ghost">Create account</a>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>Learn More</div>
+
+  </section>
+
+
+  <!-- ══════════ WHAT IS IT ══════════ -->
+  <div class="fc-section">
+    <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
+    <h2 class="section-title">What is <span class="hl">FlowCyto</span>?</h2>
+    <div class="about-layout">
+      <div class="about-body">
+        <p>
+          FlowCyto is a bioinformatics web tool designed to <strong>identify cell populations 
+          from gene expression profiles</strong>. Given a list of gene symbols in HGNC format, 
+          the predictor cross-references them against thousands of gene–cell relationships 
+          extracted from the <strong>CellMarker</strong> database.
+        </p>
+        <p>
+          Each candidate cell type receives a cumulative weighted score based on how many 
+          queried genes are known markers — and with what relevance. Results are ranked 
+          and expressed as <strong>probability percentages</strong>.
+        </p>
+        <p>
+          Every query is logged per user, building a personal prediction history over time.
+          FlowCyto bridges the gap between raw flow cytometry data and reliable cell-type annotation.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-tile">
+          <div class="stat-tile-num">∞</div>
+          <div class="stat-tile-label">Gene queries</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">DB</div>
+          <div class="stat-tile-label">CellMarker source</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">%</div>
+          <div class="stat-tile-label">Probability ranking</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">&lt;1s</div>
+          <div class="stat-tile-label">Response time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fc-divider"></div>
+
+
+  <!-- ══════════ THE NEED ══════════ -->
+  <div class="fc-section">
+    <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
+    <h2 class="section-title">What need does it <span class="hl">solve</span>?</h2>
+    <div class="need-cards">
+
+      <div class="need-card">
+        <div class="need-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Manual bottleneck</h3>
+        <p>Identifying cell types from gene panels requires specialist knowledge and hours of cross-referencing scattered literature.</p>
+      </div>
+
+      <div class="need-card">
+        <div class="need-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-8 4 4 4-6 4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>No quantitative rank</h3>
+        <p>Existing tools rarely provide confidence scores or probability metrics, leaving researchers without a reliable decision framework.</p>
+      </div>
+
+      <div class="need-card">
+        <div class="need-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="9" ry="5" stroke="currentColor" stroke-width="2"/><path d="M3 12c0 2.8 4 5 9 5s9-2.2 9-5" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Fragmented databases</h3>
+        <p>CellMarker is comprehensive but not directly queryable via a user-friendly interface — FlowCyto makes it accessible in seconds.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="fc-divider"></div>
+
+
+  <!-- ══════════ HOW IT WORKS ══════════ -->
+  <div class="fc-section">
+    <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
+    <h2 class="section-title">How it <span class="hl">works</span></h2>
+    <div class="process-steps">
+
+      <div class="process-step">
+        <div class="step-node">01</div>
+        <div class="step-title">Input genes</div>
+        <div class="step-desc">Enter HGNC gene symbols separated by commas. No limit on query size.</div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-node">02</div>
+        <div class="step-title">DB matching</div>
+        <div class="step-desc">Genes are cross-referenced against thousands of weighted cell–marker associations.</div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-node">03</div>
+        <div class="step-title">Score calc</div>
+        <div class="step-desc">Cumulative scores are normalised into probability percentages per cell type.</div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-node">04</div>
+        <div class="step-title">Ranked output</div>
+        <div class="step-desc">Results returned as a ranked table and stored in your prediction history.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="fc-divider"></div>
+
+
+  <!-- ══════════ TEAM ══════════ -->
+  <div class="fc-section">
+    <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
+    <h2 class="section-title">Meet the creators: The <span class="hl">DINP</span> Team</h2>
+    <p class="team-intro">
+      FlowCyto was built by four bioinformatics students from 
+      <strong>Universitat Pompeu Fabra (UPF)</strong>, Barcelona, as part of an academic project. 
+      Our background spans wet-lab biology, database engineering, and web development.
+    </p>
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-node">D</div>
+        <div class="member-name">Diego Vicente</div>
+        <div class="member-role">Backend and project design</div>
+        <div class="member-bio">Main developer of the of the user authentication flow. Contributor on the project design and backend logic.</div>
+        <div class="member-email">diego.vicente01@estudiant.upf.edu</div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-node">I</div>
+        <div class="member-name">Itxaso Alonso</div>
+        <div class="member-role">Database curation and Frontend</div>
+        <div class="member-bio">Led the CellMarker data pipeline and relational schema design. Expert in biological data curation at scale.</div>
+        <div class="member-email">itxaso.alonso01@estudiant.upf.edu</div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-node">N</div>
+        <div class="member-name">Nahia Urra</div>
+        <div class="member-role">Backend, frontend and Full Stack</div>
+        <div class="member-bio">Responsible for Flask application structure and API design. Integrated backend logic with the frontend interface end-to-end.</div>
+        <div class="member-email">nahia.urra01@estudiant.upf.edu</div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-node">P</div>
+        <div class="member-name">Pau Villén</div>
+        <div class="member-role">Backend and Scoring System</div>
+        <div class="member-bio">Expert in SQL optimisation and backend logic. Responsible for developing the prediction scoring system.</div>
+        <div class="member-email">pau.villen01@estudiant.upf.edu</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════ FINAL CTA ══════════ -->
+  <div class="fc-cta fc-section">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Ready to identify<br>your cells?</h2>
+        <p>Run your first gene query and get your results in less than second!</p>
+      </div>
+      <div class="cta-btns">
+        <a href="{{ url_for('search') }}" class="btn-primary">Launch predictor</a>
+        <a href="{{ url_for('register') }}" class="btn-ghost">Sign up free</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="fc-footer">
+    FlowCyto &nbsp;·&nbsp; DINP Team &nbsp;·&nbsp; UPF &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; DINPteam@flowcyto.com
+  </footer>
+
+</div><!-- /fc-home -->
+
+<script>
+// Scroll reveal
+const sections = document.querySelectorAll('.fc-section');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+sections.forEach(s => obs.observe(s));
+</script>
+
+{% endblock %}

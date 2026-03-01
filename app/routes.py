@@ -7,9 +7,8 @@ from app.logic import get_cell_ranking
 
 @app.route('/')
 def home():
-    if 'user_email' not in session:
-        return redirect(url_for('login'))
-    return render_template('buscador.html')
+    return render_template('index.html')   # ← siempre muestra el home
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -32,6 +31,8 @@ def login():
 def register():
     if request.method == 'POST':
         email = request.form.get('email')
+        # Nota: Aquí falta la función es_email_valido si no está definida arriba, 
+        # pero he mantenido tu lógica original del archivo adjunto
         password = request.form.get('password')
         
         # Comprobar si el usuario ya existe
@@ -58,19 +59,34 @@ def logout():
     session.clear() # Borramos la sesión
     return redirect(url_for('login'))
 
-@app.route('/search', methods=['POST'])
+@app.route('/search', methods=['GET', 'POST'], endpoint='search') # Añadimos endpoint='search'
 def search():
     user_email = session.get('user_email')
     if not user_email:
         return redirect(url_for('login'))
 
-    ## obtener query del user y "limpiarla" (split string of genes & create list)
-    genes_input = request.form.get('genes_input', '')
-    lista_genes = [s.strip().upper() for s in genes_input.split(',') if s.strip()]
+    # 1. Obtener los genes del formulario
+    genes_raw = request.form.get('genes_input')
 
-    if not lista_genes:      
-        return render_template('buscador.html', error="The query input must have at least one gene")
+    # CORRECCIÓN AQUÍ: Validamos que genes_raw no sea None antes de hacer split
+    if not genes_raw or genes_raw.strip() == "":
+        flash("Por favor, introduce al menos un gen para realizar la búsqueda.", "warning")
+        return render_template('buscador.html')
 
+    # 2. Limpiar la lista de genes
+    genes_input = genes_raw.split(',')
+    lista_genes = [g.strip().upper() for g in genes_input if g.strip()]
+
+    # 3. Llamar a la lógica que calcula el ranking
+    # Aquí es donde realmente se obtienen los datos de la DB
     ranking = get_cell_ranking(lista_genes, user_email=user_email)
+
+    # 4. Verificar si hay resultados
+    if not ranking:
+        flash("No se encontraron resultados para los genes introducidos.", "info")
+        return render_template('buscador.html', genes_buscados=lista_genes)
+
+    # 5. Enviar resultados al HTML
+    # Importante: resultados=ranking para que tu HTML lo reconozca
     return render_template('buscador.html', resultados=ranking, genes_buscados=lista_genes)
 
