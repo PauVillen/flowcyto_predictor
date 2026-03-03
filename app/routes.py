@@ -2,7 +2,8 @@
 
 from flask import render_template, request, redirect, url_for, session, flash, current_app as app
 from app.database import db
-from app.models import User, Prediction, Result, CellType
+from sqlalchemy import func
+from app.models import User, Prediction, Result, CellType, Marker, Gene
 from app.logic import get_cell_ranking
 
 @app.route('/')
@@ -93,26 +94,33 @@ def search():
 @app.route('/profile')
 def profile():
     user_email = session.get('user_email')
-    
-    # Si no ha iniciado sesión , lo mandamos al login
     if not user_email:
         return redirect(url_for('login'))
 
-    # 1. Buscar todas las predicciones de este usuario (ordenadas de más nueva a más antigua)
+    # 1. Buscar predicciones del usuario
     predictions = Prediction.query.filter_by(user_email=user_email).order_by(Prediction.request_date.desc()).all()
 
-    # 2. Construir una lista con la información estructurada
     history = []
     for pred in predictions:
-        # Por cada predicción, buscamos sus mejores 5 resultados
-        results = db.session.query(Result, CellType.cell_name)\
-            .join(CellType, Result.cell_type_id == CellType.cell_type_id)\
-            .filter(Result.prediction_id == pred.prediction_id)\
-            .order_by(Result.probability_pct.desc())\
-            .limit(5).all()
+        lista_genes = [g.strip().upper() for g in pred.input_genes.split(',')]
 
-        # Damos formato a la fecha 
-        date_str = pred.request_date.strftime("%d-%m-%Y %H:%M") if pred.request_date else "Sin fecha"
+        # 2. Súper consulta: Traemos resultados + descripciones + sources agrupados
+        results = db.session.query(
+            Result.score,
+            Result.probability_pct,
+            CellType.cell_name,
+            CellType.cell_description,
+            func.group_concat(Marker.source.distinct()).label('sources')
+        ).join(CellType, Result.cell_type_id == CellType.cell_type_id)\
+         .join(Marker, Marker.cell_type_id == CellType.cell_type_id)\
+         .join(Gene, Gene.gene_ensembl_id == Marker.gene_ensembl_id)\
+         .filter(Result.prediction_id == pred.prediction_id)\
+         .filter(Gene.gene_symbol.in_(lista_genes))\
+         .group_by(Result.score, Result.probability_pct, CellType.cell_name, CellType.cell_description)\
+         .order_by(Result.probability_pct.desc())\
+         .limit(5).all()
+
+        date_str = pred.request_date.strftime("%Y-%m-%d %H:%M") if pred.request_date else "Sin fecha"
 
         history.append({
             'date': date_str,

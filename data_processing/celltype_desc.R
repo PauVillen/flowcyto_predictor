@@ -1,6 +1,6 @@
 # Cell type description adding
-setwd("/home/itxaso/projects/flowcyto_predictor/data_processing")
-db <- read.csv("final_db.csv", header = T)
+setwd("/Users/pauvillen14/Desktop/BIOINFO/DBW/PROJECT/flowcyto_predictor/data_processing")
+db <- read.csv("final_db_ids.csv", header = T)
 
 celltype_df <- data.frame(
   CellType = unique(db$Cell.type),
@@ -65,3 +65,4 @@ cell_descriptions <- c(
 
 
 celltype_df$Description <- cell_descriptions[celltype_df$CellType]
+write.csv(celltype_df, "cell_descriptions.csv", row.names = FALSE)

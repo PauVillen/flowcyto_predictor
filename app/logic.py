@@ -15,13 +15,15 @@ def get_cell_ranking(lista_genes, user_email=None):
         
     try:
         ranking = db.session.query(
-            CellType.cell_type_id, # for storing in results
+            CellType.cell_type_id,
             CellType.cell_name,
+            CellType.cell_description, # Traemos la descripción
+            func.group_concat(Marker.source.distinct()).label('sources'), # Juntamos los sources sin repetir
             func.sum(Marker.weight).label('total_score')
         ).join(Marker, Marker.cell_type_id == CellType.cell_type_id)\
         .join(Gene, Gene.gene_ensembl_id == Marker.gene_ensembl_id)\
         .filter(Gene.gene_symbol.in_(lista_genes))\
-        .group_by(CellType.cell_type_id, CellType.cell_name)\
+        .group_by(CellType.cell_type_id, CellType.cell_name, CellType.cell_description)\
         .order_by(func.sum(Marker.weight).desc())\
         .all()
         
@@ -64,6 +66,8 @@ def get_cell_ranking(lista_genes, user_email=None):
             prob = round((score / suma_total_scores) * 100, 2) if suma_total_scores > 0 else 0.0
             resultado_final.append({
                 'cell_name': row.cell_name,
+                'description': row.cell_description, # NUEVO
+                'sources': row.sources,              # NUEVO
                 'score': round(score, 2),
                 'probability': prob
             })
