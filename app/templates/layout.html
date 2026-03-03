@@ -22,6 +22,10 @@
             <span>Search</span>
         </a>
         {% if session.get('user_email') %}
+            <a href="{{ url_for('profile') }}" class="nav-icon-btn {% if request.endpoint == 'profile' %}active{% endif %}" data-label="Profile">
+                <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Profile</span>
+            </a>
             <a href="{{ url_for('logout') }}" class="nav-icon-btn {% if request.endpoint == 'logout' %}active{% endif %}">
                 <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <span>Logout</span>

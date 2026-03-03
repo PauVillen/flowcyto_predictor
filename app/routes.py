@@ -2,7 +2,7 @@
 
 from flask import render_template, request, redirect, url_for, session, flash, current_app as app
 from app.database import db
-from app.models import User
+from app.models import User, Prediction, Result, CellType
 from app.logic import get_cell_ranking
 
 @app.route('/')
@@ -90,3 +90,34 @@ def search():
     # Importante: resultados=ranking para que tu HTML lo reconozca
     return render_template('buscador.html', resultados=ranking, genes_buscados=lista_genes)
 
+@app.route('/profile')
+def profile():
+    user_email = session.get('user_email')
+    
+    # Si no ha iniciado sesión , lo mandamos al login
+    if not user_email:
+        return redirect(url_for('login'))
+
+    # 1. Buscar todas las predicciones de este usuario (ordenadas de más nueva a más antigua)
+    predictions = Prediction.query.filter_by(user_email=user_email).order_by(Prediction.request_date.desc()).all()
+
+    # 2. Construir una lista con la información estructurada
+    history = []
+    for pred in predictions:
+        # Por cada predicción, buscamos sus mejores 5 resultados
+        results = db.session.query(Result, CellType.cell_name)\
+            .join(CellType, Result.cell_type_id == CellType.cell_type_id)\
+            .filter(Result.prediction_id == pred.prediction_id)\
+            .order_by(Result.probability_pct.desc())\
+            .limit(5).all()
+
+        # Damos formato a la fecha 
+        date_str = pred.request_date.strftime("%d-%m-%Y %H:%M") if pred.request_date else "Sin fecha"
+
+        history.append({
+            'date': date_str,
+            'genes': pred.input_genes,
+            'results': results
+        })
+
+    return render_template('profile.html', user_email=user_email, history=history)
