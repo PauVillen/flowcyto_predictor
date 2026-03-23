@@ -17,8 +17,8 @@ def get_cell_ranking(lista_genes, user_email=None):
         ranking = db.session.query(
             CellType.cell_type_id,
             CellType.cell_name,
-            CellType.cell_description, # Traemos la descripción
-            func.group_concat(Marker.source.distinct()).label('sources'), # Juntamos los sources sin repetir
+            CellType.cell_description, 
+            func.group_concat(Marker.source.distinct()).label('sources'), 
             func.sum(Marker.weight).label('total_score')
         ).join(Marker, Marker.cell_type_id == CellType.cell_type_id)\
         .join(Gene, Gene.gene_ensembl_id == Marker.gene_ensembl_id)\
@@ -27,20 +27,20 @@ def get_cell_ranking(lista_genes, user_email=None):
         .order_by(func.sum(Marker.weight).desc())\
         .all()
         
-        # Si hay resultados y tenemos un usuario, guardamos en la DB
+        # If there are results and user, save in DB
         if ranking and user_email:
-            # Sumamos todos los 'total_score' 
+            # Add all the 'total_score' 
             suma_total_scores = sum(row.total_score for row in ranking)
 
-            # Convertimos la lista ['CD4', 'CD8'] en un string "CD4, CD8"
+            # Convert the list to string
             genes_string = ", ".join(lista_genes)
         
-            # Creamos la "cabecera" de la búsqueda en la tabla Prediction
+            # Create search header in Prediction table
             nueva_prediccion = Prediction(user_email=user_email, input_genes=genes_string, request_date=datetime.now())
             db.session.add(nueva_prediccion)
-            db.session.flush() # Esto nos da el ID de la predicción sin cerrar la sesión
+            db.session.flush() # Gives us the prediction ID without closing session
 
-            # Guardamos cada línea del ranking en la tabla Result
+            # Save each line of ranking in Results table
             for row in ranking:
 
                 prob = 0
@@ -51,14 +51,13 @@ def get_cell_ranking(lista_genes, user_email=None):
                     prediction_id=nueva_prediccion.prediction_id,
                     cell_type_id=row.cell_type_id,
                     score=row.total_score,
-                    probability_pct=round(prob, 2) # Redondeamos probabilidad a 2 decimales
+                    probability_pct=round(prob, 2) # Round probability to 2 decimals
                 )
                 db.session.add(nuevo_resultado)
         
-            db.session.commit() # Guardamos todo de golpe en MySQL
+            db.session.commit() # Save all in MySQL
 
-        # Calculamos probabilidades para devolver al frontend
-        # Usamos float() porque MySQL devuelve tipo Decimal
+        # Calculate probabilities
         suma_total_scores = float(sum(row.total_score for row in ranking))
         resultado_final = []
         for row in ranking:
@@ -66,8 +65,8 @@ def get_cell_ranking(lista_genes, user_email=None):
             prob = round((score / suma_total_scores) * 100, 2) if suma_total_scores > 0 else 0.0
             resultado_final.append({
                 'cell_name': row.cell_name,
-                'description': row.cell_description, # NUEVO
-                'sources': row.sources,              # NUEVO
+                'description': row.cell_description, 
+                'sources': row.sources,              
                 'score': round(score, 2),
                 'probability': prob
             })
@@ -77,6 +76,6 @@ def get_cell_ranking(lista_genes, user_email=None):
     except Exception as e:
         db.session.rollback()
         import traceback
-        traceback.print_exc()  # muestra el error completo en la terminal
+        traceback.print_exc()  # show the complete error in terminal
         print(f"Error en get_cell_ranking: {e}")
         return []

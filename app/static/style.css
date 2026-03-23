@@ -1,7 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background-color: #000; font-family: sans-serif; overflow: hidden; }
 
-/* FONDO DE PARTÍCULAS */
 #particles-js {
     position: fixed;
     top: 0;
@@ -12,7 +11,6 @@ body { background-color: #000; font-family: sans-serif; overflow: hidden; }
     pointer-events: none !important; 
 }
 
-/* ENVOLTORIO PRINCIPAL */
 .main-wrapper {
     position: relative;
     z-index: 10;
@@ -20,15 +18,14 @@ body { background-color: #000; font-family: sans-serif; overflow: hidden; }
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    pointer-events: none; /* Deja pasar clics al contenido */
+    pointer-events: none; 
 }
 
-/* LA CARD DEL BUSCADOR */
 .card-dark {
     background-color: #0d0d0d !important;
     position: relative;
     z-index: 20;
-    pointer-events: all !important; /* Activa interacción */
+    pointer-events: all !important;
     border: 1px solid #333;
     padding: 40px;
     border-radius: 20px;
@@ -37,10 +34,9 @@ body { background-color: #000; font-family: sans-serif; overflow: hidden; }
     box-shadow: 0 20px 60px rgba(0,0,0,1);
 }
 
-/* --- MENÚ NEÓN MINIMALISTA (ELIMINA LO MORADO) --- */
 .nav-neon-main {
     position: absolute !important;
-    top: -65px !important; /* Posicionado sobre la card */
+    top: -65px !important; 
     left: 50% !important;
     transform: translateX(-50%) !important;
     display: flex !important;
@@ -59,11 +55,10 @@ body { background-color: #000; font-family: sans-serif; overflow: hidden; }
     justify-content: center !important;
     align-items: center !important;
     transition: all 0.3s ease !important;
-    color: #ffffff !important; /* Iconos blancos */
+    color: #ffffff !important; 
     text-decoration: none !important;
 }
 
-/* Tamaño de los iconos SVG */
 .icon-svg {
     width: 16px !important;
     height: 16px !important;
@@ -71,7 +66,6 @@ body { background-color: #000; font-family: sans-serif; overflow: hidden; }
     stroke-width: 2;
 }
 
-/* ESTADO ACTIVO O HOVER (ROJO Y BRILLO) */
 .neon-circle.active, 
 .neon-circle:hover {
     color: #ff0000 !important;
@@ -80,7 +74,6 @@ body { background-color: #000; font-family: sans-serif; overflow: hidden; }
     transform: translateY(-3px) !important;
 }
 
-/* TOOLTIP (TEXTO AL PASAR EL RATÓN) */
 .neon-circle::after {
     content: attr(data-label);
     position: absolute;
@@ -102,7 +95,6 @@ body { background-color: #000; font-family: sans-serif; overflow: hidden; }
     opacity: 1;
 }
 
-/* ARREGLOS DE INPUTS */
 #genes_input {
     cursor: text !important;
     background: #1a1a1a;

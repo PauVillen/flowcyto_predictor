@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Code to map genes to their ensembl_ID and to create cell IDs
-@author: pauvillen14
 """
 
 # Import libraries

@@ -8,7 +8,7 @@ from app.logic import get_cell_ranking
 
 @app.route('/')
 def home():
-    return render_template('index.html')   # ← siempre muestra el home
+    return render_template('index.html')   # always show home
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -17,11 +17,11 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
         
-        # Buscamos al usuario en la base de datos
+        # Search for user in database
         user = User.query.filter_by(user_email=email, user_password=password).first()
         
         if user:
-            session['user_email'] = user.user_email # Guardamos el email en la sesión
+            session['user_email'] = user.user_email # Save the email in the session
             return redirect(url_for('home'))
         else:
             return render_template('login.html', error="Credenciales incorrectas")
@@ -32,23 +32,22 @@ def login():
 def register():
     if request.method == 'POST':
         email = request.form.get('email')
-        # Nota: Aquí falta la función es_email_valido si no está definida arriba, 
-        # pero he mantenido tu lógica original del archivo adjunto
+       
         password = request.form.get('password')
         
-        # Comprobar si el usuario ya existe
+        # Check if user already exists
         user = User.query.filter_by(user_email=email).first()
         if user:
             return render_template('register.html', error="Already existing email.")
 
-        # Crear el nuevo usuario
+        # Create new user
         new_user = User(user_email=email, user_password=password)
         
-        # Guardar en la base de datos
+        # Save in database
         try:
             db.session.add(new_user)
             db.session.commit()
-            return redirect(url_for('login')) # Si sale bien, al login
+            return redirect(url_for('login')) # Go to login if register successful
         except Exception as e:
             db.session.rollback()
             return render_template('register.html', error="Error in register.")
@@ -57,38 +56,35 @@ def register():
 
 @app.route('/logout')
 def logout():
-    session.clear() # Borramos la sesión
+    session.clear() # Erase session
     return redirect(url_for('login'))
 
-@app.route('/search', methods=['GET', 'POST'], endpoint='search') # Añadimos endpoint='search'
+@app.route('/search', methods=['GET', 'POST'], endpoint='search') # Add endpoint='search'
 def search():
     user_email = session.get('user_email')
     if not user_email:
         return redirect(url_for('login'))
 
-    # 1. Obtener los genes del formulario
+    # 1. Obtain gains from form
     genes_raw = request.form.get('genes_input')
-
-    # CORRECCIÓN AQUÍ: Validamos que genes_raw no sea None antes de hacer split
+    # Validate genes_raw is not None before splitting
     if not genes_raw or genes_raw.strip() == "":
-        flash("Por favor, introduce al menos un gen para realizar la búsqueda.", "warning")
+        flash("Please, introduce at least one gene to perform the search.", "warning")
         return render_template('buscador.html')
 
-    # 2. Limpiar la lista de genes
+    # 2. Clean gene list
     genes_input = genes_raw.split(',')
     lista_genes = [g.strip().upper() for g in genes_input if g.strip()]
 
-    # 3. Llamar a la lógica que calcula el ranking
-    # Aquí es donde realmente se obtienen los datos de la DB
+    # 3. Call the logic to calculate the ranking
     ranking = get_cell_ranking(lista_genes, user_email=user_email)
 
-    # 4. Verificar si hay resultados
+    # 4. Check if there are results
     if not ranking:
-        flash("No se encontraron resultados para los genes introducidos.", "info")
+        flash("No results found for the input genes.", "info")
         return render_template('buscador.html', genes_buscados=lista_genes)
 
-    # 5. Enviar resultados al HTML
-    # Importante: resultados=ranking para que tu HTML lo reconozca
+    # 5. Send results to HTML
     return render_template('buscador.html', resultados=ranking, genes_buscados=lista_genes)
 
 @app.route('/profile')
@@ -97,14 +93,14 @@ def profile():
     if not user_email:
         return redirect(url_for('login'))
 
-    # 1. Buscar predicciones del usuario
+    # 1. Look for user predictions
     predictions = Prediction.query.filter_by(user_email=user_email).order_by(Prediction.request_date.desc()).all()
 
     history = []
     for pred in predictions:
         lista_genes = [g.strip().upper() for g in pred.input_genes.split(',')]
 
-        # 2. Súper consulta: Traemos resultados + descripciones + sources agrupados
+        # 2. Results
         results = db.session.query(
             Result.score,
             Result.probability_pct,

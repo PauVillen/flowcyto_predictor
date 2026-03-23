@@ -4,9 +4,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap');
 
-/* ════════════════════════════════
-   GAMA DE COLORES
-════════════════════════════════ */
+
 :root {
   --red:        #ff1a1a;
   --red-mid:    #cc0000;
@@ -22,9 +20,7 @@
   --line:       rgba(255,255,255,0.05);
 }
 
-/* ════════════════════════════════
-   BASE
-════════════════════════════════ */
+
 .fc-home {
   font-family: 'Rajdhani', sans-serif;
   color: #fff;
@@ -35,9 +31,7 @@
 
 .fc-home * { box-sizing: border-box; }
 
-/* ════════════════════════════════
-   HERO
-════════════════════════════════ */
+
 .fc-hero {
   min-height: 100vh;
   display: flex;
@@ -238,7 +232,7 @@
 
 .btn-ghost:hover { border-color: var(--grey-5); color: #fff; }
 
-/* — Scroll hint — */
+/*  Scroll hint  */
 .scroll-hint {
   margin-top: 60px;
   display: flex;
@@ -264,9 +258,7 @@
   50%      { transform: translateY(6px); opacity:1; }
 }
 
-/* ════════════════════════════════
-   SECTION WRAPPER
-════════════════════════════════ */
+
 .fc-section {
   max-width: 1000px;
   margin: 0 auto;
@@ -309,9 +301,7 @@
 
 .section-title .hl { color: var(--red); }
 
-/* ════════════════════════════════
-   DIVIDER
-════════════════════════════════ */
+
 .fc-divider {
   max-width: 1000px;
   margin: 0 auto;
@@ -332,9 +322,7 @@
   box-shadow: 0 0 10px var(--red);
 }
 
-/* ════════════════════════════════
-   ABOUT — two column
-════════════════════════════════ */
+
 .about-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -397,9 +385,7 @@
   text-transform: uppercase;
 }
 
-/* ════════════════════════════════
-   NEED — problem cards
-════════════════════════════════ */
+
 .need-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -462,9 +448,7 @@
   margin: 0;
 }
 
-/* ════════════════════════════════
-   HOW IT WORKS — process steps
-════════════════════════════════ */
+
 .process-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -473,7 +457,6 @@
   margin-top: 8px;
 }
 
-/* connecting line between steps */
 .process-steps::before {
   content: '';
   position: absolute;
@@ -548,9 +531,7 @@
   line-height: 1.7;
 }
 
-/* ════════════════════════════════
-   TEAM — member cards
-════════════════════════════════ */
+
 .team-intro {
   font-size: 1rem;
   color: var(--grey-5);
@@ -577,7 +558,6 @@
   transition: border-color 0.4s, transform 0.3s;
 }
 
-/* Corner accent */
 .member-card::before {
   content: '';
   position: absolute;
@@ -594,7 +574,6 @@
 
 .member-card:hover::before { width: 70px; height: 70px; }
 
-/* Node graphic */
 .member-node {
   width: 52px; height: 52px;
   border-radius: 50%;
@@ -649,7 +628,6 @@
   word-break: break-all;
 }
 
-/* Connection lines decorative SVG between cards */
 .team-connectors {
   position: relative;
   height: 30px;
@@ -658,9 +636,7 @@
   pointer-events: none;
 }
 
-/* ════════════════════════════════
-   FINAL CTA
-════════════════════════════════ */
+
 .fc-cta {
   max-width: 1000px;
   margin: 0 auto;
@@ -680,7 +656,6 @@
   overflow: hidden;
 }
 
-/* radial red glow */
 .cta-inner::before {
   content: '';
   position: absolute;
@@ -691,7 +666,6 @@
   pointer-events: none;
 }
 
-/* corner dots */
 .cta-inner::after {
   content: '';
   position: absolute;
@@ -722,9 +696,7 @@
   flex-shrink: 0;
 }
 
-/* ════════════════════════════════
-   FOOTER
-════════════════════════════════ */
+
 .fc-footer {
   text-align: center;
   padding: 28px 32px;
@@ -738,9 +710,7 @@
   margin: 0 auto;
 }
 
-/* ════════════════════════════════
-   RESPONSIVE
-════════════════════════════════ */
+
 @media (max-width: 860px) {
   .about-layout { grid-template-columns: 1fr; }
   .need-cards { grid-template-columns: 1fr; }
@@ -759,7 +729,6 @@
 
 <div class="fc-home">
 
-  <!-- ══════════ HERO ══════════ -->
   <section class="fc-hero">
 
     <div class="rings">
@@ -767,7 +736,7 @@
       <div class="ring ring-2"></div>
       <div class="ring ring-3"></div>
       <img
-        src="{{ url_for('static', filename='img/logo.png') }}"
+        src="{{PREFIX}}{{ url_for('static', filename='img/logo.png') }}"
         alt="FlowCyto"
         class="logo-center">
     </div>
@@ -786,11 +755,11 @@
     </p>
 
     <div class="hero-actions">
-      <a href="{{ url_for('search') }}" class="btn-primary">
+      <a href="{{PREFIX}}{{ url_for('search') }}" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Launch predictor
       </a>
-      <a href="{{ url_for('register') }}" class="btn-ghost">Create account</a>
+      <a href="{{PREFIX}}{{ url_for('register') }}" class="btn-ghost">Create account</a>
     </div>
 
     <div class="scroll-hint">
@@ -799,7 +768,6 @@
   </section>
 
 
-  <!-- ══════════ WHAT IS IT ══════════ -->
   <div class="fc-section">
     <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
     <h2 class="section-title">What is <span class="hl">FlowCyto</span>?</h2>
@@ -845,7 +813,6 @@
   <div class="fc-divider"></div>
 
 
-  <!-- ══════════ THE NEED ══════════ -->
   <div class="fc-section">
     <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
     <h2 class="section-title">What need does it <span class="hl">solve</span>?</h2>
@@ -881,7 +848,6 @@
   <div class="fc-divider"></div>
 
 
-  <!-- ══════════ HOW IT WORKS ══════════ -->
   <div class="fc-section">
     <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
     <h2 class="section-title">How it <span class="hl">works</span></h2>
@@ -917,7 +883,6 @@
   <div class="fc-divider"></div>
 
 
-  <!-- ══════════ TEAM ══════════ -->
   <div class="fc-section">
     <div class="section-eyebrow">FlowCyto - BLOOD-cell version</div>
     <h2 class="section-title">Meet the creators: The <span class="hl">DINP</span> Team</h2>
@@ -957,14 +922,13 @@
         <div class="member-name">Pau Villén</div>
         <div class="member-role">SQL & Backend</div>
         <div class="member-bio">Expert in SQL optimisation and backend logic. Responsible for creating the database and developing the prediction scoring system and user profile.</div>
-        <div class="member-email">pau.villen01@estudiant.upf.edu</div>
+        <div class="member-email">pau.villenvidal01@estudiant.upf.edu</div>
       </div>
 
     </div>
   </div>
 
 
-  <!-- ══════════ FINAL CTA ══════════ -->
   <div class="fc-cta fc-section">
     <div class="cta-inner">
       <div class="cta-text">
@@ -972,22 +936,20 @@
         <p>Run your first gene query and get your results in less than second!</p>
       </div>
       <div class="cta-btns">
-        <a href="{{ url_for('search') }}" class="btn-primary">Launch predictor</a>
-        <a href="{{ url_for('register') }}" class="btn-ghost">Sign up free</a>
+        <a href="{{PREFIX}}{{ url_for('search') }}" class="btn-primary">Launch predictor</a>
+        <a href="{{PREFIX}}{{ url_for('register') }}" class="btn-ghost">Sign up free</a>
       </div>
     </div>
   </div>
 
 
-  <!-- ══════════ FOOTER ══════════ -->
   <footer class="fc-footer">
     FlowCyto &nbsp;·&nbsp; DINP Team &nbsp;·&nbsp; UPF &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; DINPteam@flowcyto.com
   </footer>
 
-</div><!-- /fc-home -->
+</div>
 
 <script>
-// Scroll reveal
 const sections = document.querySelectorAll('.fc-section');
 const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}FlowCyto{% endblock %}</title>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{PREFIX}}{{ url_for('static', filename='style.css') }}">
   {% block head %}{% endblock %}
 </head>
 
 <body>
-  <!-- Laterales decorativos -->
   <div class="side side-left" aria-hidden="true"></div>
   <div class="side side-right" aria-hidden="true"></div>
 
   <div class="page">
     <header class="header header-center">
-      <a class="brand" href="{{ url_for('home') }}">
+      <a class="brand" href="{{PREFIX}}{{ url_for('home') }}">
         <img class="brand-logo"
-            src="{{ url_for('static', filename='img/logo.jpeg') }}"
+            src="{{PREFIX}}{{ url_for('static', filename='img/logo.jpeg') }}"
             alt="FlowCyto logo">
 
       </a>

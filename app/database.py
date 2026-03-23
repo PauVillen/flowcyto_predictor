@@ -1,4 +1,4 @@
-## este script solo es para inicalizar el objeto db de forma independiente para evitar errores cuando vayamos añadiento más funciones
+## script to initialize the db object independently to avoid errors when adding more functions
 
 from flask_sqlalchemy import SQLAlchemy
 

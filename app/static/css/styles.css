@@ -1,10 +1,6 @@
-/* =========================
-   ESTILO MINIMALISTA DARK & RED
-   ========================= */
 
-/* Fondo general de la aplicación */
 body, .page-dark {
-    background-color: #000000 !important; /* Permitimos ver las partículas */
+    background-color: #000000 !important; 
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -14,7 +10,7 @@ body, .page-dark {
 
 
 .steps-index .nav-dot {
-    pointer-events: all !important; /* Los puntos sí se pueden clicar */
+    pointer-events: all !important; 
 }
 
 .nav-dot {
@@ -27,20 +23,17 @@ body, .page-dark {
     cursor: pointer;
 }
 
-/* Efecto al apoyar el ratón: Ilumina en rojo */
 .nav-dot:hover {
     background-color: #ff0000;
     border-color: #ff0000;
     box-shadow: 0 0 15px #ff0000;
 }
 
-/* Punto de la página actual */
 .nav-dot.active {
     background-color: #ffffff;
     border-color: #ffffff;
 }
 
-/* Contenedor central (Card) */
 .main {
     display: flex;
     justify-content: center;
@@ -72,7 +65,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Formulario e Inputs */
 .form-row {
     display: flex;
     flex-direction: column;
@@ -103,7 +95,6 @@ input:focus {
     background: #151515;
 }
 
-/* Botones */
 .actions {
     display: flex;
     gap: 15px;
@@ -143,7 +134,6 @@ input:focus {
     color: #fff;
 }
 
-/* Tabla de resultados */
 .table-dark {
     width: 100%;
     margin-top: 30px;
@@ -170,57 +160,51 @@ input:focus {
     font-weight: bold;
 }
 
-/* Estilo del Spinner Rojo de Carga */
 .red-spinner {
     display: inline-block;
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(255, 0, 0, 0.1); /* Círculo base casi invisible */
+    border: 3px solid rgba(255, 0, 0, 0.1); 
     border-radius: 50%;
-    border-top-color: #ff0000; /* Solo la parte de arriba es roja intensa */
-    animation: spin 1s ease-in-out infinite; /* Animación de giro */
+    border-top-color: #ff0000; 
+    animation: spin 1s ease-in-out infinite; 
     margin: 0 auto;
 }
 
-/* Definición de la animación de giro */
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
 
-/* Asegurar que el formulario y los resultados se oculten al cargar (opcional) */
+
 .loading #predict-form, 
 .loading .results-area {
     opacity: 0.2;
-    pointer-events: none; /* Desactiva clics mientras carga */
+    pointer-events: none; 
 }
 
 
 
 
-/* --- ARREGLO FINAL DE PRIORIDAD --- */
 
-/* 1. El contenedor del buscador debe estar arriba del todo */
+
 .main {
     position: relative;
     z-index: 20 !important;
-    pointer-events: none; /* Deja pasar el ratón a la card */
+    pointer-events: none;
 }
 
-/* 2. La Card y todo lo que hay dentro DEBEN ser clicables */
 .card-dark, 
 .card-dark * {
     pointer-events: all !important;
     pointer-events: auto !important;
 }
 
-/* 3. El input específico por si acaso */
 #genes_input {
     cursor: text !important;
     position: relative;
     z-index: 10001 !important;
 }
 
-/* 4. Las partículas al fondo del todo y sin molestar al ratón */
 #particles-js {
     position: fixed !important;
     z-index: 1 !important;
@@ -267,7 +251,6 @@ input:focus {
     filter: drop-shadow(0 0 8px #ff0000);
 }
 
-/* Línea decorativa bajo el icono activo */
 .nav-icon-btn.active::after {
     content: '';
     display: block;
@@ -279,7 +262,6 @@ input:focus {
     margin: 0 auto;
 }
 
-/* Bajamos la card para que no quede tapada por la nav */
 .main-wrapper {
     padding-top: 100px;
 }

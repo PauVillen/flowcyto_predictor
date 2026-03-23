@@ -1,4 +1,4 @@
-## es el lanzador de la app  (no hay q tocar nada de aquí)
+## app launcher
 
 from app import create_app
 

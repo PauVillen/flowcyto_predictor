@@ -7,7 +7,7 @@
             <h1>Blood Cell-type predictor</h1>
             <p class="muted">Enter gene symbols separated by commas (HGNC).</p>
 
-            <form method="POST" action="{{ url_for('search') }}" id="predict-form">
+            <form method="POST" action="{{PREFIX}}{{ url_for('search') }}" id="predict-form">
                 <div class="form-row">
                     <label for="genes_input">Query genes</label>
                     <input type="text" id="genes_input" name="genes_input" placeholder="Ex: MS4A1, CCR7, IL7R" required>
@@ -15,7 +15,7 @@
 
                 <div class="actions">
                     <button type="submit" class="btn-red" id="submit-btn">Predict</button>
-                    <a href="{{ url_for('search') }}" class="btn-outline" style="text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center;">
+                    <a href="{{PREFIX}}{{ url_for('search') }}" class="btn-outline" style="text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center;">
                         Clear
                     </a>
                 </div>
@@ -76,14 +76,14 @@
 
         if (form) {
             form.addEventListener('submit', function() {
-                // 1. Mostrar carga
+                // Show load
                 loadingOverlay.style.display = 'block';
                 
-                // 2. Deshabilitar botón para evitar doble clic
+                // Disable button to avoid double click
                 submitBtn.disabled = true;
                 submitBtn.innerText = 'Analyzing...';
 
-                // 3. Ocultar resultados previos si existen
+                // Hide previous results if existent
                 if (resultsArea) {
                     resultsArea.style.display = 'none';
                 }

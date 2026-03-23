@@ -1,6 +1,6 @@
-## el esquema de nuestra db en sí
+## schema of our database
 
-from app.database import db     ## aquí importamos el objeto que hemos creado en database.py
+from app.database import db     ## import the object previously created in database.py
 from datetime import datetime
 
 
