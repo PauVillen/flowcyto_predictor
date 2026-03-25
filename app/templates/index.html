@@ -736,7 +736,7 @@
       <div class="ring ring-2"></div>
       <div class="ring ring-3"></div>
       <img
-        src="{{PREFIX}}{{ url_for('static', filename='img/logo.png') }}"
+        src="{{ url_for('static', filename='img/logo.png') }}"
         alt="FlowCyto"
         class="logo-center">
     </div>
@@ -755,11 +755,11 @@
     </p>
 
     <div class="hero-actions">
-      <a href="{{PREFIX}}{{ url_for('search') }}" class="btn-primary">
+      <a href="{{ url_for('search') }}" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Launch predictor
       </a>
-      <a href="{{PREFIX}}{{ url_for('register') }}" class="btn-ghost">Create account</a>
+      <a href="{{ url_for('register') }}" class="btn-ghost">Create account</a>
     </div>
 
     <div class="scroll-hint">
@@ -936,8 +936,8 @@
         <p>Run your first gene query and get your results in less than second!</p>
       </div>
       <div class="cta-btns">
-        <a href="{{PREFIX}}{{ url_for('search') }}" class="btn-primary">Launch predictor</a>
-        <a href="{{PREFIX}}{{ url_for('register') }}" class="btn-ghost">Sign up free</a>
+        <a href="{{ url_for('search') }}" class="btn-primary">Launch predictor</a>
+        <a href="{{ url_for('register') }}" class="btn-ghost">Sign up free</a>
       </div>
     </div>
   </div>

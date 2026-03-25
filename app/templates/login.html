@@ -7,7 +7,7 @@
             <h1>Welcome back!</h1>
             <p class="muted">Log in to access the cell-predictor tool.</p>
 
-            <form method="POST" action="{{PREFIX}}{{ url_for('login') }}">
+            <form method="POST" action="{{ url_for('login') }}">
                 <div class="form-row">
                     <label for="email">User email</label>
                     <input type="email" id="email" name="email" placeholder="name@domain.com" required>
@@ -30,7 +30,7 @@
 
                 <p class="muted" style="color:aliceblue ; margin-top: 25px;">
                     You don't have an account yet?  
-                    <a href="{{PREFIX}}{{ url_for('register') }}" style="color: #ff0000; text-decoration: none;"> Sign up</a>
+                    <a href="{{ url_for('register') }}" style="color: #ff0000; text-decoration: none;"> Sign up</a>
                 </p>
             </form>
         </section>

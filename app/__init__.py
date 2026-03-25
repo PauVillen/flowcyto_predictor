@@ -12,9 +12,6 @@ def create_app():
     
     db.init_app(app)
     
-    @app.context_processor
-    def inject_prefix():
-        return dict(PREFIX='/flowcyto')
     
     with app.app_context():
         from . import routes     ## import routes here to avoid circular imports

@@ -4,38 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>FlowCyto Predictor</title>
-    <link rel="icon" type="image/png" href="{{PREFIX}}{{ url_for('static', filename='img/logo_txiki.png') }}">
-    <link href="{{PREFIX}}{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
-    <link href="{{PREFIX}}{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo_txiki.png') }}">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
 </head>
 
 <body id="page-top" style="margin:0; padding:0; background-color: #000;">
     <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: 1;"></div>
 
     <nav class="top-nav">
-        <a href="{{PREFIX}}{{ url_for('home') }}" class="nav-icon-btn {% if request.endpoint == 'home' %}active{% endif %}" data-label="Home">
+        <a href="{{ url_for('home') }}" class="nav-icon-btn {% if request.endpoint == 'home' %}active{% endif %}" data-label="Home">
             <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z" stroke="currentColor" stroke-width="2"/><path d="M9 21V12h6v9" stroke="currentColor" stroke-width="2"/></svg>
             <span>Home</span>
         </a>
-        <a href="{{PREFIX}}{{ url_for('search') }}" class="nav-icon-btn {% if request.endpoint == 'search' %}active{% endif %}" data-label="Search">
+        <a href="{{ url_for('search') }}" class="nav-icon-btn {% if request.endpoint == 'search' %}active{% endif %}" data-label="Search">
             <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             <span>Search</span>
         </a>
         {% if session.get('user_email') %}
-            <a href="{{PREFIX}}{{ url_for('profile') }}" class="nav-icon-btn {% if request.endpoint == 'profile' %}active{% endif %}" data-label="Profile">
+            <a href="{{ url_for('profile') }}" class="nav-icon-btn {% if request.endpoint == 'profile' %}active{% endif %}" data-label="Profile">
                 <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>
                 <span>Profile</span>
             </a>
-            <a href="{{PREFIX}}{{ url_for('logout') }}" class="nav-icon-btn {% if request.endpoint == 'logout' %}active{% endif %}">
+            <a href="{{ url_for('logout') }}" class="nav-icon-btn {% if request.endpoint == 'logout' %}active{% endif %}">
                 <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <span>Logout</span>
             </a>
         {% else %}
-            <a href="{{PREFIX}}{{ url_for('login') }}" class="nav-icon-btn {% if request.endpoint == 'login' %}active{% endif %}">
+            <a href="{{ url_for('login') }}" class="nav-icon-btn {% if request.endpoint == 'login' %}active{% endif %}">
                 <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>
                 <span>Login</span>
             </a>
-            <a href="{{PREFIX}}{{ url_for('register') }}" class="nav-icon-btn {% if request.endpoint == 'register' %}active{% endif %}">
+            <a href="{{ url_for('register') }}" class="nav-icon-btn {% if request.endpoint == 'register' %}active{% endif %}">
                 <svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/><line x1="19" y1="8" x2="19" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="16" y1="11" x2="22" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 <span>Register</span>
             </a>
