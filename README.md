@@ -56,6 +56,6 @@ Scores are calculated using the support scores provided by original databases (s
 - HTML / CSS
 
 
-## NOTE
+## AUTHORS
 
-App was developed as an educational project for the Master's course.
+This App was developed as an educational project for the Master's course, by Itxaso Alonso, Nahia Urra, Diego Vicente and Pau Villén. :)
