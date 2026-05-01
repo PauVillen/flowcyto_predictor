@@ -1,14 +1,11 @@
-# Flowcyto cell predictor
-### flowcyto_predictor
+# FlowCyto Predictor
 
-Blood cell type predictor created for the Databases and Web development course, 2025-26, Bioinformatics for Health Sciences master (UPF)
-
-* Creators:<b> Nahia Urra, Pau Villén, Diego Vicente and Itxaso Alonso. </b>
+* Creators:<b> Nahia Urra, Pau Villén, Diego Vicente and Itxaso Alonso :) </b>
 
 ## DESCRIPTION
-FlowCyto Predictor is a web application that predicts the most likely blood cell type based on a list of input genes.
-The application compares the input gene list with a database of known cell type markers and calculates a prediction score for each cell type. Results are ranked according to their scores.
-The application has been developed using Flask (Python) and MySQL.
+FlowCyto Predictor is a web application that predicts the most likely blood-cell type based on a list of input genes: the application compares the input gene list with a database of known cell type markers and calculates a prediction score for each cell type. As a result, it returns a ranking of the most likely blood-cell types, according to their scores.
+
+The application has been developed on Flask (Python) and MySQL.
 
 ## HOW TO RUN APP FROM YOUR OWN COMPUTER
 
@@ -49,8 +46,7 @@ Scores are calculated using the support scores provided by original databases (s
 
 ## TECHNOLOGIES
 
-- Python
-- Flask
+- Flask (Python)
 - MySQL
 - SQLAlchemy
 - HTML / CSS
@@ -58,4 +54,6 @@ Scores are calculated using the support scores provided by original databases (s
 
 ## AUTHORS
 
-This App was developed as an educational project for the Master's course, by Itxaso Alonso, Nahia Urra, Diego Vicente and Pau Villén.
+This App was developed as an educational project for the Databases and Web development course from the Bioinformatics for Health Sciences master (UPF-UB).
+
+*All rights reserved to us. 2026.*
